@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/partiton/partiton"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "竞技指南",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "blue",
+    "color": "black",
+    "backgroundColor": "white",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imageIcon/主页.png",
+        "selectedIconPath": "imageIcon/主页选中.png"
+      },
+      {
+        "pagePath": "pages/partiton/partiton",
+        "text": "分区",
+        "iconPath": "imageIcon/分区.png",
+        "selectedIconPath": "imageIcon/分区选中.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "imageIcon/我的.png",
+        "selectedIconPath": "imageIcon/我的选中.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

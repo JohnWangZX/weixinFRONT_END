@@ -1,0 +1,153 @@
+.container {
+ height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+}
+.flex-wrp1{
+  display: flex;
+}
+.flex-wrp2{
+  display: flex;
+}
+.flex-wrp3{
+  display: flex;
+}
+.flex-wrp4{
+  display: flex;
+}
+.image_basketball{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon1{
+  width: 100px;
+  height: 100px;
+}
+.icon2{
+  width: 100px;
+  height:100px;
+}
+.icon3{
+  width: 100px;
+  height:100px;
+}
+.icon4{
+  width: 100px;
+  height:100px;
+}
+.icon5{
+  width: 100px;
+  height:100px;
+}
+.icon6{
+  width: 100px;
+  height:100px;
+}
+.icon7{
+  width: 100px;
+  height:100px;
+}
+.icon8{
+  width: 100px;
+  height:100px;
+}
+.icon9{
+  width: 100px;
+  height:100px;
+}
+.icon10{
+  width: 100px;
+  height:100px;
+}
+.icon11{
+  width: 100px;
+  height:100px;
+}
+.icon12{
+  width: 100px;
+  height:100px;
+}
+.image_football{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_volleyball{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_pingpong{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_fit{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_computer{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_badminton{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_yoka{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_running{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_swimming{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_equipment{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.image_else{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
