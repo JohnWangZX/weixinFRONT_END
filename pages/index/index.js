@@ -3,10 +3,13 @@
 var app = getApp()
 Page({
   data: {
-    background: ['../../res/test1_kb.jpg', '../../res/test2_kb.jpg'],
+    background: ['../../res/test1_kb.jpg', '../../res/test2_kb.jpg','../../res/test3_kb.jpg'],
+    src:['../../res/test1_kb.jpg', '../../res/test2_kb.jpg','../../res/test3_kb.jpg'],
     indicatorDots: true,
+    indicatorColor:"grey",
+    indicatorActiveColor:"white",
     vertical: false,
-    autoplay: false,
+    autoplay: true,
     interval: 3000,
     duration: 1000
 },

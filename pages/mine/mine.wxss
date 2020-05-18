@@ -4,16 +4,39 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-.textStyle {
+.userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.textContainer {
-  margin-top: 200px;
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.btnImg {
+  margin-right: 8rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.btn1 {
+  width: 120%;
+  margin-top: 20rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

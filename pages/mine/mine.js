@@ -1,20 +1,74 @@
+const app = getApp()
 Page({
-  data:{
-    text:"Page mine"
+  data: {
+    motto: 'Hello World',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    todos:[
+      {name:'JavaScript',completed:true},
+      {name:'Html',completed:true},
+      {name:'Css',completed:false}
+    ],
+    massage:'initial'
   },
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+  //事件处理函数
+  bindViewTap: function() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
   },
-  onReady:function(){
-    // 页面渲染完成
+  inputHandler:function(e){
+    this.setData({
+      message:e.detail.value
+    })
+    //用来改变data数据
   },
-  onShow:function(){
-    // 页面显示
+  buttonTapHandler:function(e){
+console.log(123)
+//获取参数属性
+console.dir(e.target.dataset)
   },
-  onHide:function(){
-    // 页面隐藏
+  innerHandler:function(){
+console.log("inner")
   },
-  onUnload:function(){
-    // 页面关闭
+  outterHandler:function(){
+    console.log("outter")
+      },
+  onLoad: function () {
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } else if (this.data.canIUse){
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }
+  },
+  getUserInfo: function(e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
   }
 })

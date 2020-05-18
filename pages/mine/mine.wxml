@@ -1,5 +1,12 @@
 <view class="container">
-  <view class="textContainer">
-    <text class="textStyle">{{text}}</text>
+   <view class="userinfo">
+     <button class="btn1" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"  > 
+     <image class='btnImg' src='../../imageIcon/匿名.png'></image>
+     <view>一键登录</view>
+      </button> 
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
   </view>
 </view>

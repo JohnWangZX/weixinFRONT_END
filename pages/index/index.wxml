@@ -6,12 +6,14 @@
   <button type="primary" size="mini" plain="true" bindtap="handleinput"> 确定</button>
   </view>
 <view class="page-section page-section-spacing swiper">
-            <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+            <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}"
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                <block wx:for="{{background}}" wx:key="*this">
+                <block wx:for="{{background}}" wx:for-index="idx"  wx:key="*this">
                     <swiper-item>
-                        <view class="swiper-item bc_{{item}}">
-                        <image wx:if='{{background}}' bindtap="chooseImg" class='photo' src='{{background}}'></image>
+                        <view class="swiper-item {{item}}">
+                        <image wx:if="{{idx==0}}" class='photo1' bindtap="jump1" src='../../res/test1_kb.jpg'></image>
+                        <image wx:elif="{{idx==1}}" class='photo2' bindtap="jump2" src='../../res/test2_kb.jpg'></image>
+                        <image wx:else class='photo3' bindtap="jump3" src='../../res/test3_kb.jpg'></image>
                         </view>
                     </swiper-item>
                 </block>
