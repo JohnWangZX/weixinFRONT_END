@@ -1,0 +1,54 @@
+<!--pages/publish.wxml-->
+<import src="../../common/footer.wxml" />
+<import src="../../common/header.wxml" />
+<view class="container">
+      <template is="header" data="{{title: '发布视频'}}"/>
+      <image class='icon1' src="../../imageIcon/shipin.png"></image>
+      <view class="section ">
+                <view class="section__title">视频标题：{{inputValue}}</view>
+                <view class='input_border1'>
+                <input  bindinput="bindKeyInput" placeholder="请输入视频标题"/>
+                </view>
+             <view class="title-bg">视频描述:</view>
+             <view class='input_border2'>
+    <textarea  placeholder="请输入相关描述" bindblur="getDataBindTap" auto-height />
+    </view>
+    <view class="section__title">发布到：</view>
+          <view class='picker_border'>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array_section}}">
+                <view class="picker">
+                    选择板块：{{array_section[index]}}
+                </view>
+            </picker>
+            </view>
+    </view>
+    <view class="section__title">添加视频</view>
+    <view class="flex-wrp1" style="flex-direction:row;">
+    <image class="icon2" bindtap="chooseVideo" src="../../imageIcon/tianjia.png">
+  </image>
+  </view>
+<block wx:if="{{src != ''}}">
+  <video src="{{src}}"></video>
+</block>
+<view class="page-body">
+    <view class="page-body-wrapper">
+      <form bindsubmit="openLocation">
+        <view class="page-body-form">
+          <view class="images-wrapper">
+          <text class="images-text">请选择封面</text>
+          <view class="images-list">
+            <block wx:for-items="{{imageList}}" wx:for-item="image">
+              <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
+            </block>
+            <image class="images-image images-image-plus" src="../../imageIcon/plus.png"  bindtap="chooseImage"></image>
+          </view>
+        </view>
+        </view>
+      </form>
+    </view>
+  </view>
+ <button class="btn1"  bindtap="submit"  > 
+     <image class='btnImg' src='../../imageIcon/submit.png'></image>
+     <view>确认发布</view>
+      </button> 
+    </view>

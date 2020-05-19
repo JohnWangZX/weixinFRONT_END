@@ -19,6 +19,9 @@ Page({
   },
   basketball_handler:function(){
    console.log(1)
+   wx.navigateTo({
+    url: '../publish/publish'
+  })
   },
   football_handler:function(){
     console.log(2)
