@@ -9,4 +9,59 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view class="icon_split">
+ <image class='image_split' src="../../imageIcon/fengexian.png" bindtap="split_handler">
+ </image>
+ </view>
+ <view class="flex-wrp1" style="flex-direction:row;">
+<view class="icon_fans">
+ <image class='image_fans' src="../../imageIcon/fensi.png" bindtap="fans_handler">
+ </image>
+ <text>粉丝</text>
+ <text>0</text>
+ </view>
+ <view class="icon_follow">
+ <image class='image_follow' src='../../imageIcon/guanzhu.png' bindtap="follow_handler"></image>
+ <text>关注</text>
+  <text>0</text>
+ </view>
+ </view>
+ <view class="icon_split">
+ <image class='image_split' src="../../imageIcon/fengexian.png" bindtap="split_handler">
+ </image>
+ </view>
+ <view class="flex-wrp2" style="flex-direction:row;">
+<view class="icon_collect">
+ <image class='image_collect' src="../../imageIcon/收藏.png" bindtap="collect_handler">
+ </image>
+ <text>我的收藏</text>
+ </view>
+ <view class="icon_release">
+ <image class='image_release' src='../../imageIcon/发布.png' bindtap="release_handler"></image>
+ <text>我的发布</text>
+ </view>
+ <view class="icon_history">
+ <image class='image_history' src='../../imageIcon/观看记录.png' bindtap="history_handler"></image>
+ <text>观看记录</text>
+ </view>
+ </view>
+ <view class="icon_split">
+ <image class='image_split' src="../../imageIcon/fengexian.png" bindtap="split_handler">
+ </image>
+ </view>
+ <view class="flex-wrp3" style="flex-direction:row;">
+<view class="icon_comment">
+ <image class='image_comment' src="../../imageIcon/评论.png" bindtap="comment_handler">
+ </image>
+ <text>我的评论</text>
+ </view>
+ <view class="icon_upload">
+ <image class='image_upload' src='../../imageIcon/上传.png' bindtap="upload_handler"></image>
+ <text>上传</text>
+ </view>
+ <view class="icon_others">
+ <image class='image_others' src='../../imageIcon/其他.png' bindtap="others_handler"></image>
+ <text>其他</text>
+ </view>
+ </view>
 </view>

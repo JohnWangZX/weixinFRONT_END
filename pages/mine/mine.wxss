@@ -40,3 +40,111 @@
   align-items: center;
   justify-content: center;
 }
+.flex-wrp1{
+  display: flex;
+}
+.flex-wrp2{
+  display: flex;
+}
+.flex-wrp3{
+  display: flex;
+}
+.icon_split{
+  width: 568px;
+  height: 30px;
+}
+.image_split{
+  height: 20rpx;
+  width:1136rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon_fans{
+  width: 100px;
+  height:25px;
+}
+.image_fans{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon_follow{
+  width: 100px;
+  height:25px;
+}
+.image_follow{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon_release{
+  width: 100px;
+  height:25px;
+}
+.image_release{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon_collect{
+  width: 100px;
+  height:25px;
+}
+.image_collect{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon_history{
+  width: 100px;
+  height:25px;
+}
+.image_history{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon_upload{
+  width: 100px;
+  height:25px;
+}
+.image_upload{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon_comment{
+  width: 100px;
+  height:25px;
+}
+.image_comment{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
+.icon_others{
+  width: 100px;
+  height:25px;
+}
+.image_others{
+  height: 80rpx;
+  width: 80rpx;
+  margin:5 rpx;
+  padding-top: 5 rpx;
+  margin-left: 0rpx;
+}
