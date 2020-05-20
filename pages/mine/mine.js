@@ -70,5 +70,31 @@ console.log("inner")
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  upload_handler:function(){
+    console.log("publish")
+    wx.navigateTo({
+     url: '../publish/publish'
+   })
+   },
+  collect_handler:function(){
+    console.log("collect")
+    wx.navigateTo({
+     url: '../collect/collect'
+   })
+   },
+   containerTap: function (res) {
+    var that = this
+    var x = res.touches[0].pageX;
+    var y = res.touches[0].pageY + 85;
+    this.setData({
+      rippleStyle: ''
+    });
+    setTimeout(function () {
+      that.setData({
+        rippleStyle: 'top:' + y + 'px;left:' + x + 'px;-webkit-animation: ripple 0.2s linear;animation:ripple 0.2s linear;'
+      });
+    }, 200)
   }
 })
+

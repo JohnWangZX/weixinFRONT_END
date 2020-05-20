@@ -1,0 +1,15 @@
+/* pages/collect/collect.wxss */
+.container {
+  height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   padding: 50rpx 0;
+   box-sizing: border-box;
+  
+ }
+ .icon_shoucang{
+  width: 70px;
+  height: 70px;
+}

@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/mine/mine",
     "pages/partiton/partiton",
-    "pages/publish/publish"
+    "pages/publish/publish",
+    "pages/collect/collect"
   ],
   "window": {
     "backgroundTextStyle": "light",
