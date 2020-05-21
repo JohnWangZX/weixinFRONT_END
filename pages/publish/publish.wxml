@@ -37,7 +37,7 @@
           <view class="images-wrapper">
           <text class="images-text">请选择封面</text>
           <view class="images-list">
-            <block wx:for-items="{{imageList}}" wx:for-item="image">
+            <block wx:for-items="{{imageList}}" wx:for-item="image" wx:key="*this">
               <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
             </block>
             <image class="images-image images-image-plus" src="../../imageIcon/plus.png"  bindtap="chooseImage"></image>
