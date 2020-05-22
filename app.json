@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/partiton/partiton",
     "pages/publish/publish",
-    "pages/collect/collect"
+    "pages/collect/collect",
+    "pages/video/video"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,10 +1,10 @@
 <template name="jiefItem1">
     <!-- List Item begin -->
     <view class="content-list">
-    <navigator class="item">
+    <navigator class="item" url="../pages/video">
         <view class="top">
         <view class="cover-img" 
-        style="opacity: 1; background-image: url({{coverImg}});">
+        style="opacity: 1; background-image: url({{coverImg}});" bindtap="toVideoPlay">
         </view>
         </view>
         <view class="info">

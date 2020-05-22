@@ -84,4 +84,10 @@ Page({
 //     }
 //   })  
 // }
+  toVideoPlay:function(){
+  console.log("video")
+  wx.navigateTo({
+    url: '../video/video',
+  })
+}
  })
