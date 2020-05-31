@@ -18,6 +18,9 @@ Page({
     // 页面关闭
   },
   basketball_handler:function(){
+    wx.navigateTo({
+      url: '../basketball_block/basketball_block'
+    })
    console.log(1)
   },
   football_handler:function(){

@@ -6,7 +6,8 @@
     "pages/partiton/partiton",
     "pages/publish/publish",
     "pages/collect/collect",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/basketball_block/basketball_block"
   ],
   "window": {
     "backgroundTextStyle": "light",

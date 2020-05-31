@@ -21,7 +21,7 @@
             </swiper>
         </view>
         <view class="row-container">
-    <view class="header" url="../video/viedo?title=video">
+    <view class="header" >
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot"></view>
         <image class="icon_command" src="../../imageIcon/tuijian.png"></image>
