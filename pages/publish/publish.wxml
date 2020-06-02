@@ -21,6 +21,69 @@
                 </view>
             </picker>
             </view>
+    <view class="section__title">版块细分：</view>
+          <view class='picker_border'>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{basket_section}}" wx:if="{{index==0}}">
+                <view class="picker" >
+                    选择子板块：{{basket_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{football_section}}" wx:elif="{{index==1}}">
+                <view class="picker" >
+                    选择子板块：{{football_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{volley_section}}" wx:elif="{{index==2}}">
+                <view class="picker" >
+                    选择子板块：{{volley_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{ping_section}}" wx:elif="{{index==3}}">
+                <view class="picker" >
+                    选择子板块：{{ping_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{com_section}}" wx:elif="{{index==4}}">
+                <view class="picker" >
+                    选择子板块：{{com_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{fit_section}}" wx:elif="{{index==5}}">
+                <view class="picker" >
+                    选择子板块：{{fit_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{run_section}}" wx:elif="{{index==6}}">
+                <view class="picker" >
+                    选择子板块：{{run_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{swim_section}}" wx:elif="{{index==7}}">
+                <view class="picker" >
+                    选择子板块：{{swim_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{yoga_section}}" wx:elif="{{index==8}}">
+                <view class="picker" >
+                    选择子板块：{{yoga_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{bad_section}}" wx:elif="{{index==9}}">
+                <view class="picker" >
+                    选择子板块：{{bad_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{equ_section}}" wx:elif="{{index==10}}">
+                <view class="picker" >
+                    选择子板块：{{equ_section[sub_section_index]}}
+                </view>
+            </picker>
+            <picker bindchange="bindPickerSubChange" value="{{sub_section_index}}" range="{{else_section}}" wx:else>
+                <view class="picker" >
+                    选择子板块：{{else_section[sub_section_index]}}
+                </view>
+            </picker>
+    </view>
     </view>
     <view class="section__title">添加视频</view>
     <view class="flex-wrp1" style="flex-direction:row;">

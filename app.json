@@ -20,7 +20,8 @@
     "pages/running_block/running_block",
     "pages/swimming_block/swimming_block",
     "pages/hotlist/hotlist",
-    "pages/equipment_block/equipment_block"
+    "pages/equipment_block/equipment_block",
+    "pages/else_block/else"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -85,5 +85,8 @@ Page({
    },
    else_handler:function(){
     console.log(12)
+    wx.navigateTo({
+      url: '../else_block/else',
+    })
    },
 })

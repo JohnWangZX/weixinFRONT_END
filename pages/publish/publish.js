@@ -4,7 +4,20 @@ var sizeType = [ ['compressed'], ['original'], ['compressed', 'original'] ]
 Page({
   data: {
     array_section:["篮球","足球","排球","乒乓球","电竞","健身","跑步","游泳","瑜伽","羽毛球","装备","其他"],
+    basket_section:["实战教学","篮球技巧","战术讲解"],
+    football_section:["实战教学","动作技巧","战术讲解"],
+    volley_section:["实战教学","排球技巧","战术讲解"],
+    ping_section:["实战教学","直板技巧","横拍技巧"],
+    com_section:["实战教学","电竞技巧","战术讲解"],
+    fit_section:["膳食搭配","健身技巧"],
+    bad_section:["实战教学","羽毛球技巧","战术讲解"],
+    yoga_section:["基础动作","进阶提高"],
+    run_section:["短跑","长跑/马拉松"],
+    swim_section:["基础泳姿","进阶技巧"],
+    equ_section:["开箱测评","性能测评"],
+    else_section:["其他"],
     index:0,
+    sub_section_index:0,
     images:[],
     sourceTypeIndex: 0,
     sourceType: ['拍照', '相册', '拍照或相册'],
@@ -85,6 +98,12 @@ Page({
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
+    })
+  },
+  bindPickerSubChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      sub_section_index: e.detail.value
     })
   },
   sourceTypeChange: function (e) {
