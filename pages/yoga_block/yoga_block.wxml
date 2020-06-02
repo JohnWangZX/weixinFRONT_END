@@ -84,7 +84,8 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{yoga_advanced_newList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <block wx:for="{{yoga_advanced_newList}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>

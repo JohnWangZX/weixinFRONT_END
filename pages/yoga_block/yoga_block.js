@@ -23,7 +23,7 @@ Page( {
         playNum: '4.7万',
         commentNum: '977',
         avid: 'av2'
-      },
+      }, 
       {
         coverImg: '../../res/video_bc3.png',
         title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',

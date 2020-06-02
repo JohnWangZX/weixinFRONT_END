@@ -61,18 +61,19 @@
         <text>最热干货</text>
       </view>
       <view class="right hot">
-        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+        <view class="bilibili-index-sprite bilibili-index-ranking">
         <text bindtap="toHotList">更多</text>
+        </view>
       </view>
     </view>
     <view class="content-wrapper">
       <block wx:for="{{soc_skill_hotList}}" wx:key="avid">
-        <!-- 使用热门推荐模板，传入当前循环对象item -->
-        <template is="jiefItem1" data="{{...item}}"/>
+      <template is="jiefItem1" data="{{...item}}"/>
       </block>
+      </view>
     </view>
-    </view>
-    <view class="row-container">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <view class="row-container">
     <view class="header">
       <view class="left">
         <view class="bilibili-index-sprite bilibili-index-hot"></view>
