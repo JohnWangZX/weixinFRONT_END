@@ -23,35 +23,65 @@ Page({
     })
    console.log(1)
   },
-  football_handler:function(){
-    console.log(2)
-   },
+  soccer_handler:function(){ 
+    wx.navigateTo({
+      url: '../soccer_block/soccer_block'
+    })
+   console.log(1)
+  },
    volleyball_handler:function(){
+    wx.navigateTo({
+      url: '../volleyball_block/volleyball_block'
+    })
     console.log(3)
    },
    pingpong_handler:function(){
+     wx.navigateTo({
+       url: '../pingpong_block/pingpong_block',
+     })
     console.log(4)
    },
   computer_handler:function(){
+    wx.navigateTo({
+      url: '../computer_block/computer_block',
+    })
     console.log(5)
    },
    fit_handler:function(){
+     wx.navigateTo({
+       url: '../fit_block/fit_block',
+     })
     console.log(6)
    },
    badminton_handler:function(){
+     wx.navigateTo({
+       url: '../badminton_block/badminton_block',
+     })
     console.log(7)
    },
    yoka_handler:function(){
+     wx.navigateTo({
+       url: '../yoga_block/yoga_block',
+     })
     console.log(8)
    },
    running_handler:function(){
+     wx.navigateTo({
+       url: '../running_block/running_block',
+     })
     console.log(9)
    },
    swimming_handler:function(){
+     wx.navigateTo({
+       url: '../swimming_block/swimming_block',
+     })
     console.log(10)
    },
    equipment_handler:function(){
     console.log(11)
+    wx.navigateTo({
+      url: '../equipment_block/equipment_block',
+    })
    },
    else_handler:function(){
     console.log(12)

@@ -6,7 +6,7 @@
  <text>篮球</text>
  </view>
  <view class="icon2">
- <image class='image_football' src='../../imageIcon/足球.png' bindtap="football_handler"></image>
+ <image class='image_football' src='../../imageIcon/足球.png' bindtap="soccer_handler"></image>
  <text>足球</text>
  </view>
  <view class="icon3">

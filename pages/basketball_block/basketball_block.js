@@ -231,4 +231,9 @@ Page( {
       })
     }
   },
+  toHotList:function(){
+    wx.navigateTo({
+      url: '../hotlist/hotlist',
+    })
+    }
 })

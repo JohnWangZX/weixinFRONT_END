@@ -6,8 +6,21 @@
     "pages/partiton/partiton",
     "pages/publish/publish",
     "pages/collect/collect",
+    "pages/release/release",
+    "pages/history/history",
     "pages/video/video",
-    "pages/basketball_block/basketball_block"
+    "pages/basketball_block/basketball_block",
+    "pages/soccer_block/soccer_block",
+    "pages/volleyball_block/volleyball_block",
+    "pages/pingpong_block/pingpong_block",
+    "pages/computer_block/computer_block",
+    "pages/fit_block/fit_block",
+    "pages/badminton_block/badminton_block",
+    "pages/yoga_block/yoga_block",
+    "pages/running_block/running_block",
+    "pages/swimming_block/swimming_block",
+    "pages/hotlist/hotlist",
+    "pages/equipment_block/equipment_block"
   ],
   "window": {
     "backgroundTextStyle": "light",

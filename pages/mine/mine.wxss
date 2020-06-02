@@ -83,7 +83,7 @@
   margin-left: 0rpx;
 }
 .icon_release{
-  width: 100px;
+  width: 110px;
   height:25px;
 }
 .image_release{

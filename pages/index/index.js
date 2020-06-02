@@ -89,5 +89,10 @@ Page({
   wx.navigateTo({
     url: '../video/video',
   })
+},
+toHotList:function(){
+wx.navigateTo({
+  url: '../hotlist/hotlist',
+})
 }
  })

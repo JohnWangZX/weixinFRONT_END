@@ -29,7 +29,7 @@
       </view>
       <view class="right hot">
         <view class="bilibili-index-sprite bilibili-index-ranking"></view>
-        <text>更多</text>
+        <text bindtap="toHotList">更多</text>
       </view>
     </view>
     <view class="content-wrapper">

@@ -83,6 +83,18 @@ console.log("inner")
      url: '../collect/collect'
    })
    },
+   release_handler:function(){
+    console.log("release")
+    wx.navigateTo({
+     url: '../release/release'
+   })
+   },
+   history_handler:function(){
+    console.log("history")
+    wx.navigateTo({
+     url: '../history/history'
+   })
+   },
    containerTap: function (res) {
     var that = this
     var x = res.touches[0].pageX;

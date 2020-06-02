@@ -60,6 +60,27 @@
 					"id": -1,
 					"name": "pages/collect/collect",
 					"pathName": "pages/collect/collect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/release/release",
+					"pathName": "pages/release/release",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/history/history",
+					"pathName": "pages/history/history",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/soccer_block/soccer_block",
+					"pathName": "pages/soccer_block/soccer_block",
 					"scene": null
 				}
 			]

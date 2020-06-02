@@ -93,6 +93,7 @@ Page({
   onShareAppMessage: function () {
 
   },
+ 
   toVideoPlay:function(){
     console.log("video")
     wx.navigateTo({

@@ -1,0 +1,30 @@
+<!--pages/collect/collect.wxml-->
+<import src="../../common/item.wxml"/>
+<import src="../../common/footer.wxml" />
+<import src="../../common/header.wxml" />
+<view class="container">
+      <template is="header" data="{{title: '我的发布'}}"/>
+      <image class='icon_fabu' src="../../imageIcon/fabu.png"></image>
+ </view>
+ <view class="row-container">
+    <navigator class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <image class="icon_command" src="../../imageIcon/xiaofabu.png"></image>
+        <text>我的发布</text>
+      </view>
+      <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+        <text>更多</text>
+      </view>
+    </navigator>
+    <view class="content-wrapper">
+      <block wx:for="{{hotList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <template is="jiefItem1" data="{{...item}}"/>
+      </block>
+    </view>
+</view>
+
+ 
+

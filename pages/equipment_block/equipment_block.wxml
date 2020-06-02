@@ -1,0 +1,96 @@
+<!--pages/equipment_block/equipment_block.wxml-->
+<import src="../../common/item.wxml"/>
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">开箱测评</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">性能测评</view>
+</view>
+ 
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height: {{winHeight?winHeight+'px':'auto'}}" bindchange="bindChange">
+    <!-- 我是哈哈 -->
+    <swiper-item>
+    <scroll-view scroll-y="true" style="height: {{winHeight?winHeight+'px':'auto'}}">
+     <view class="row-container">
+    <view class="header" >
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <image class="icon_command" src="../../imageIcon/kaixiangyanhuo.png"></image>
+        <text>最热干货</text>
+      </view>
+      <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+        <text bindtap="toHotList">更多</text>
+      </view>
+    </view>
+    <view class="content-wrapper">
+      <block wx:for="{{equ_kaixiang_hotList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <template is="jiefItem1" data="{{...item}}"/>
+      </block>
+    </view>
+    </view>
+    <view class="row-container">
+    <view class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <image class="icon_command" src="../../imageIcon/hot.png"></image>
+        <text>最新发布</text>
+        <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+        <text>下翻发现更多精彩(#^.^#)</text>
+      </view>
+      </view>
+    </view>
+    <view class="content-wrapper">
+      <block wx:for="{{equ_kaixiang_newList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <template is="jiefItem1" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>
+    </scroll-view>
+    </swiper-item>
+    <!-- 我是呵呵 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" style="height: {{winHeight?winHeight+'px':'auto'}}">
+     <view class="row-container">
+    <view class="header" >
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <image class="icon_command" src="../../imageIcon/xingneng.png"></image>
+        <text>最热干货</text>
+      </view>
+      <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+        <text bindtap="toHotList">更多</text>
+      </view>
+    </view>
+    <view class="content-wrapper">
+      <block wx:for="{{equ_xingneng_hotList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <template is="jiefItem1" data="{{...item}}"/>
+      </block>
+    </view>
+    </view>
+    <view class="row-container">
+    <view class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <image class="icon_command" src="../../imageIcon/hot.png"></image>
+        <text>最新发布</text>
+        <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+        <text>下翻发现更多精彩(#^.^#)</text>
+      </view>
+      </view>
+    </view>
+    <view class="content-wrapper">
+      <block wx:for="{{equ_xingneng_newList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <template is="jiefItem1" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>
+    </scroll-view>
+    </swiper-item>
+    <!-- 我是嘿嘿 -->
+</swiper>

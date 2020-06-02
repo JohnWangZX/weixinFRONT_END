@@ -1,0 +1,20 @@
+<!--pages/hotlist/hotlist.wxml-->
+<import src="../../common/item.wxml"/>
+ <view class="row-container">
+    <view class="header" >
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <image class="icon_command" src="../../imageIcon/tuijian.png"></image>
+        <text>热度最高</text>
+      </view>
+      <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+      </view>
+    </view>
+    <view class="content-wrapper">
+      <block wx:for="{{hotList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <template is="jiefItem1" data="{{...item}}"/>
+      </block>
+    </view>
+    </view>
