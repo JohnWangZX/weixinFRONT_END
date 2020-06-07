@@ -62,6 +62,7 @@ console.log("inner")
         }
       })
     }
+    console.log(this.userInfo)
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -70,6 +71,7 @@ console.log("inner")
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+    console.log(this.userInfo)
   },
   upload_handler:function(){
     console.log("publish")
@@ -94,6 +96,11 @@ console.log("inner")
     wx.navigateTo({
      url: '../history/history'
    })
+   },
+   comment_handler:function(){
+    wx.navigateTo({
+      url: '../comment/comment'
+    })
    },
    containerTap: function (res) {
     var that = this

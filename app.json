@@ -21,7 +21,8 @@
     "pages/swimming_block/swimming_block",
     "pages/hotlist/hotlist",
     "pages/equipment_block/equipment_block",
-    "pages/else_block/else"
+    "pages/else_block/else",
+    "pages/comment/comment"
   ],
   "window": {
     "backgroundTextStyle": "light",

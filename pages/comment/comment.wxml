@@ -1,0 +1,20 @@
+<!--pages/comment/comment.wxml-->
+<import src="../../common/item2.wxml"/>
+<view class="row-container">
+    <view class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-hot"></view>
+        <image class="icon_command" src="../../imageIcon/pinglun.png"></image>
+        <text>我的亮评</text>
+        <view class="right hot">
+        <view class="bilibili-index-sprite bilibili-index-ranking"></view>
+      </view>
+      </view>
+    </view>
+    <view class="content-wrapper">
+      <block wx:for="{{danmuList}}" wx:key="avid">
+        <!-- 使用热门推荐模板，传入当前循环对象item -->
+        <template is="jiefItem2" data="{{...item}}"/>
+      </block>
+    </view>
+    </view>

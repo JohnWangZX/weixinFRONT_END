@@ -1,0 +1,20 @@
+<template name="jiefItem2">
+    <!-- List Item begin -->
+    <view class="content-list">
+    <navigator class="item" url="../pages/video">
+        <view class="top">
+        <view class="cover-img" 
+        style="opacity: 1; background-image: url({{coverImg}});" bindtap="toVideoPlay">
+        </view>
+        </view>
+        <view class="info">
+        <view class="title">{{text}}</view>
+        <view class="meta clearfix">
+            <view class="cell ">
+                <text>评论于：{{title}}</text>
+            </view>
+        </view>
+        </view>
+    </navigator>
+    </view>
+    </template>
