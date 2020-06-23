@@ -1,7 +1,8 @@
 <!--pages/video/video.wxml-->
 <view class="section tc">
-  <text class="title">{{title}}</text>
-  <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  <text class="title">{{result.title}}</text>
+  <video id="myVideo" bindtimeupdate="timeUpdate" src="{{result.videoUrl}}" binderror="videoErrorCallback" bindtap ="start"
+  danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
   <view class="videoPage">
   <button class="videoshare" open-type="share" bindtap="onShareAppMessage">
      <view class="video-btn">
@@ -19,7 +20,7 @@
       <text>收藏</text> 
     </view> 
   </button>
-  <button class="videodownload">
+  <button class="videodownload" bindtap="addLikes">
   <view class="video-btn">
       <view class="video-pic">
        <image src="../../imageIcon/dianzan.png"></image>
@@ -36,26 +37,28 @@
     </view>
   <view class="videoinfo">
 <view class="videoinfo-title">
-<image wx:if="{{playCount>=1000}}" class="icon1" src="../../imageIcon/hot.png"></image>
- <text>{{title}}</text>
+<image wx:if="{{result.playNum>=1000}}" class="icon1" src="../../imageIcon/hot.png"></image>
+ <text>{{result.title}}</text>
  </view>
  <view class="video-info">
    <image class="video-info-play-pic" src="../../imageIcon/playnum.png"></image>
-   <text class="video-info-play-number">{{playCount}}</text>
+   <view hidden="{{isPlay}}" class="video-info-play-number">{{result.playNum}}</view>
+   <view wx:if="{{isPlay}}" class="video-info-play-number">{{result.playNum+1}}</view>
    <image class="video-info-play-pic" src="../../imageIcon/jianyi.png"></image>
-   <text class="video-info-play-number">{{commentCount}}</text>
+   <text class="video-info-play-number">{{result.commentNum+commentTime}}</text>
    <image class="video-info-play-pic" src="../../imageIcon/dianzan-2.png"></image>
-   <text class="video-info-play-number">{{dianzanCount}}</text>
+   <view hidden="{{isLike}}" class="video-info-play-number">{{result.likes}}</view>
+  <view wx:if="{{isLike}}" class="video-info-play-number">{{result.likes+1}}</view>
  </view>
  <view class="video-introduce">
-      <text>{{info}}</text>
+      <text>{{result.info}}</text>
  </view>
 </view>
 <view class="video-upinfo">
       <view class="flex-cont flex-simple">
-        <view class="s-img"><image src="{{iconsrc}}"></image></view>
+        <view class="s-img"><image src="{{userInfo.img}}"></image></view>
         <view class="flex-item">
-          <text class="s-tit">{{name}}</text>
+          <text class="s-tit">{{userInfo.name}}</text>
           <text class="s-desc">2天前投递</text>
         </view>
         <button plain style="display:block; color: #EA6CAF; border-color: #EA6CAF; margin-left:200rpx" class="marginview">关注</button>

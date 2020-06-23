@@ -4,7 +4,8 @@
     <navigator class="item" url="../pages/video">
         <view class="top">
         <view class="cover-img" 
-        style="opacity: 1; background-image: url({{coverImg}});" bindtap="toVideoPlay">
+        style="opacity: 1; background-image: url({{coverImg}});" bindtap="toVideoPlay" 
+        data-yes="{{id}}">
         </view>
         </view>
         <view class="info">

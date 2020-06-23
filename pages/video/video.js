@@ -10,37 +10,69 @@ function getRandomColor () {
 }
 
 Page({
-  onReady: function (res) {
+  onLoad:function(options){
+    this.setData({
+      postId:options.videoId
+    })
+  },
+  onReady: function () {
     this.videoContext = wx.createVideoContext('myVideo')
+    var that=this
+    var postId=that.data.postId
+    wx.request({
+      url: 'http://localhost:8080/api/video/getVideoById',
+      method:'GET',
+      data:{
+        id:postId
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+        },
+        success (res) {
+          that.setData({
+            result:res.data
+        });
+        }
+    })
+    wx.request({
+      url: 'http://localhost:8080/api/danmu/getDanmuList',
+      method:'GET',
+      data:{
+        postid:postId
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+        },
+        success (res) {
+          that.setData({
+            danmuList:res.data
+        });
+        }
+    })
+    wx.request({
+      url: 'http://localhost:8080/api/user/getUserInfo',
+      method:'GET',
+      data:{
+        id:1
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+        },
+        success (res) {
+          that.setData({
+            userInfo:res.data
+        });
+        }
+    })
+  },
+  data:{
+    postId:0,
+    isPlay:false,
+    isLike:false,
+    commentTime:0,
+    currentVideoTime:0
   },
   inputValue: '',
-    data: {
-        src: '',
-        title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-    danmuList: [
-      {
-        text: '第 1s 出现的弹幕',
-        color: '#ff0000',
-        time: 1
-      },
-      {
-        text: '第 3s 出现的弹幕',
-        color: '#ff00ff',
-        time: 3
-      },
-      { text: 'sb',
-      color: '#ff00ff',
-      time: 5}
-    ],
-    iconsrc:'../../imageIcon/匿名.png',
-    name:"小网红",
-    fansNUm:100,
-    playCount: 10000,
-    commentCount:100,
-    dianzanCount:5,
-    info:"最近是FGO和FZ的联动活动，所以特地给了闪闪、呆毛、大帝一大堆镜头....孔明本身的动作场景不多，但我还是强行给塞进去了23333 另外就是切嗣爸爸，虽然我给你的戏份少，但我给你儿子的戏份多呀！！",
-    title:"【Fate全系列】英灵乱斗: 夺回未来的战争「Grand Order」"
-  },
   bindInputBlur: function(e) {
     this.inputValue = e.detail.value
   },
@@ -57,10 +89,86 @@ Page({
             }
         })
     },
+    start:function(){
+      var that=this
+      var postId=that.data.postId
+      that.setData({
+        isPlay:true
+      })
+    wx.request({
+      url: 'http://localhost:8080/api/video/addPlayNum',
+      method:'POST',
+      data:{
+        id:postId,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' // 默认值
+        },
+        success (res) {
+        }
+    })
+    },
   bindSendDanmu: function () {
     this.videoContext.sendDanmu({
       text: this.inputValue,
       color: getRandomColor()
+    })
+    var that=this
+    that.setData({
+      commentTime:that.data.commentTime+1
+    })
+    var postId=that.data.postId
+    wx.request({
+      url: 'http://localhost:8080/api/video/addCommentNum',
+      method:'POST',
+      data:{
+        id:postId
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' // 默认值
+        },
+    }),
+    wx.request({
+      url: 'http://localhost:8080/api/danmu/addDanmu',
+      method:'POST',
+      data:{
+        postid:postId,
+        userid:1,
+        text:this.inputValue,
+        color:getRandomColor(),
+        time:that.data.currentVideoTime+1,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' // 默认值
+        },
+        success (res) {
+        }
+    })
+  },
+  timeUpdate: function (e) {
+    //实时播放进度 秒数
+      var currentTime = parseInt(e.detail.currentTime)
+      this.setData({
+        currentVideoTime:currentTime
+      })
+  },
+  addLikes:function(){
+    var that=this
+    var postId=that.data.postId
+    that.setData({
+      isLike:true
+    })
+    wx.request({
+      url: 'http://localhost:8080/api/video/addLikes',
+      method:'POST',
+      data:{
+        id:postId,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' // 默认值
+        },
+        success (res) {
+        }
     })
   },
     videoErrorCallback: function(e) {

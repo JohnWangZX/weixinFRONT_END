@@ -1,5 +1,7 @@
 const app = getApp()
 Page({
+  onReady: function (res){
+  },
   data: {
     motto: 'Hello World',
     userInfo: {},
@@ -72,6 +74,20 @@ console.log("inner")
       hasUserInfo: true
     })
     console.log(this.userInfo)
+    var that=this
+    wx.request({
+      url: 'http://localhost:8080/api/user/getUserInfo',
+      method:'GET',
+      data:{
+        id:2
+      },
+      success (res) {
+        console.log(res.data)
+        that.setData({
+          user:res.data
+      });
+      }
+    })
   },
   upload_handler:function(){
     console.log("publish")

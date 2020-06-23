@@ -19,12 +19,12 @@
  <image class='image_fans' src="../../imageIcon/fensi.png" >
  </image>
  <text>粉丝</text>
- <text>0</text>
+ <text>{{user.fansNum}}</text>
  </view>
  <view class="icon_follow" bindtap="follow_handler">
  <image class='image_follow' src='../../imageIcon/guanzhu.png' ></image>
  <text>关注</text>
-  <text>0</text>
+  <text>{{user.concern}}</text>
  </view>
  </view>
  <view class="icon_split" >
