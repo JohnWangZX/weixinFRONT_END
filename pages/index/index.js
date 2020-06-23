@@ -63,5 +63,14 @@ toHotList:function(){
 wx.navigateTo({
   url: '../hotlist/hotlist',
 })
+},
+getDataBindTap:function(e){
+  var searchValue = e.detail.value;
+},
+handleinput: function(){
+  //处理输入搜索
+  wx.navigateTo({
+    url: "../search/search",
+  })
 }
  })

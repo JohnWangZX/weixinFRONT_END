@@ -1,61 +1,61 @@
 <view class='container'>
 <view class="flex-wrp1" style="flex-direction:row;">
 <view class="icon1">
- <image class='image_basketball' src="../../imageIcon/篮球.png" bindtap="basketball_handler">
+ <image class='image_basketball' src="../../imageIcon/lanqiu.png" bindtap="basketball_handler">
  </image>
  <text>篮球</text>
  </view>
  <view class="icon2">
- <image class='image_football' src='../../imageIcon/足球.png' bindtap="soccer_handler"></image>
+ <image class='image_football' src='../../imageIcon/zuqiu.png' bindtap="soccer_handler"></image>
  <text>足球</text>
  </view>
  <view class="icon3">
- <image class='image_volleyball' src='../../imageIcon/排球.png' bindtap="volleyball_handler"></image>
+ <image class='image_volleyball' src='../../imageIcon/paiqiu.png' bindtap="volleyball_handler"></image>
  <text>排球</text>
  </view>
  </view>
  <view class="flex-wrp2" style="flex-direction:row;">
 <view class="icon4">
- <image class='image_pingpong' src="../../imageIcon/乒乓球.png" bindtap="pingpong_handler">
+ <image class='image_pingpong' src="../../imageIcon/pingpang.png" bindtap="pingpong_handler">
  </image>
  <text>乒乓球</text>
  </view>
  <view class="icon5">
- <image class='image_computer' src='../../imageIcon/电竞.png' bindtap="computer_handler"></image>
+ <image class='image_computer' src='../../imageIcon/dianjing.png' bindtap="computer_handler"></image>
  <text>电竞</text>
  </view>
  <view class="icon6">
- <image class='image_fit' src='../../imageIcon/健身.png' bindtap="fit_handler"></image>
+ <image class='image_fit' src='../../imageIcon/jianshen.png' bindtap="fit_handler"></image>
  <text>健身</text>
  </view>
  </view>
  <view class="flex-wrp3" style="flex-direction:row;">
 <view class="icon7">
- <image class='image_badminton' src="../../imageIcon/羽毛球.png" bindtap="badminton_handler">
+ <image class='image_badminton' src="../../imageIcon/yumaoqiu.png" bindtap="badminton_handler">
  </image>
  <text>羽毛球</text>
  </view>
  <view class="icon8">
- <image class='image_yoka' src='../../imageIcon/瑜伽.png' bindtap="yoka_handler"></image>
+ <image class='image_yoka' src='../../imageIcon/yujia.png' bindtap="yoka_handler"></image>
  <text>瑜伽</text>
  </view>
  <view class="icon9">
- <image class='image_running' src='../../imageIcon/跑步.png' bindtap="running_handler"></image>
+ <image class='image_running' src='../../imageIcon/paobu.png' bindtap="running_handler"></image>
  <text>跑步</text>
  </view>
  </view>
  <view class="flex-wrp4" style="flex-direction:row;">
 <view class="icon10">
- <image class='image_swimming' src="../../imageIcon/游泳.png" bindtap="swimming_handler">
+ <image class='image_swimming' src="../../imageIcon/youyong.png" bindtap="swimming_handler">
  </image>
  <text>游泳</text>
  </view>
  <view class="icon11">
- <image class='image_equipment' src='../../imageIcon/装备.png' bindtap="equipment_handler"></image>
+ <image class='image_equipment' src='../../imageIcon/zhuangbei.png' bindtap="equipment_handler"></image>
  <text>装备</text>
  </view>
  <view class="icon12">
- <image class='image_else' src='../../imageIcon/其他.png' bindtap="else_handler"></image>
+ <image class='image_else' src='../../imageIcon/qita.png' bindtap="else_handler"></image>
  <text>其他</text>
  </view>
  </view>

@@ -22,7 +22,8 @@
     "pages/hotlist/hotlist",
     "pages/equipment_block/equipment_block",
     "pages/else_block/else",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -41,20 +42,20 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "imageIcon/主页.png",
-        "selectedIconPath": "imageIcon/主页选中.png"
+        "iconPath": "imageIcon/zhuye.png",
+        "selectedIconPath": "imageIcon/zhuyexuanzhong.png"
       },
       {
         "pagePath": "pages/partiton/partiton",
         "text": "分区",
-        "iconPath": "imageIcon/分区.png",
-        "selectedIconPath": "imageIcon/分区选中.png"
+        "iconPath": "imageIcon/fenqu.png",
+        "selectedIconPath": "imageIcon/fenquxuanzhong.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
-        "iconPath": "imageIcon/我的.png",
-        "selectedIconPath": "imageIcon/我的选中.png"
+        "iconPath": "imageIcon/wode.png",
+        "selectedIconPath": "imageIcon/wodexuanzhong.png"
       }
     ]
   },

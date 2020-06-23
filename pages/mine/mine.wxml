@@ -2,7 +2,7 @@
 <view class="container" bindtouchstart="containerTap">
    <view class="userinfo">
      <button class="btn1" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"  > 
-     <image class='btnImg' src='../../imageIcon/匿名.png'></image>
+     <image class='btnImg' src='../../imageIcon/niming.png'></image>
      <view>一键登录</view>
       </button> 
     <block wx:else>
@@ -33,16 +33,16 @@
  </view>
  <view class="flex-wrp2" style="flex-direction:row;">
 <view class="icon_collect" bindtap="collect_handler">
- <image class='image_collect' src="../../imageIcon/收藏.png" >
+ <image class='image_collect' src="../../imageIcon/shoucang1.png" >
  </image>
  <text>收藏</text>
  </view>
  <view class="icon_release" bindtap="release_handler">
- <image class='image_release' src='../../imageIcon/发布.png' ></image>
+ <image class='image_release' src='../../imageIcon/fabu1.png' ></image>
  <text>发布</text>
  </view>
  <view class="icon_history" bindtap="history_handler">
- <image class='image_history' src='../../imageIcon/观看记录.png' ></image>
+ <image class='image_history' src='../../imageIcon/guankan.png' ></image>
  <text>记录</text>
  </view>
  </view>
@@ -52,16 +52,16 @@
  </view>
  <view class="flex-wrp3" style="flex-direction:row;">
 <view class="icon_comment" bindtap="comment_handler">
- <image class='image_comment' src="../../imageIcon/评论.png" >
+ <image class='image_comment' src="../../imageIcon/pinglun1.png" >
  </image>
  <text>评论</text>
  </view>
  <view class="icon_upload" bindtap="upload_handler">
- <image class='image_upload' src='../../imageIcon/上传.png' ></image>
+ <image class='image_upload' src='../../imageIcon/shangchuan.png' ></image>
  <text>上传</text>
  </view>
  <view class="icon_others" bindtap="others_handler">
- <image class='image_others' src='../../imageIcon/其他.png'></image>
+ <image class='image_others' src='../../imageIcon/qita.png'></image>
  <text>其他</text>
  </view>
  </view>

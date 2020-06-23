@@ -3,7 +3,7 @@
 <view class="page">
 <view class='row'>
 <image class='image-search' src="../../imageIcon/sousuo.png"></image>
-  <input class='input' placeholder='请输入要查询的内容' placeholder-class="input-placeholder"/>
+  <input class='input' placeholder='请输入要查询的内容' placeholder-class="input-placeholder" bindblur="getDataBindTap"/>
   <button type="primary" size="mini" plain="true" bindtap="handleinput"> 确定</button>
   </view>
 <view class="page-section page-section-spacing swiper">
