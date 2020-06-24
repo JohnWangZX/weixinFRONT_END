@@ -35,6 +35,14 @@
     <image class="icon1" bindtap="bindSendDanmu" src="../../imageIcon/danmu.png"></image>
     </view>
     </view>
+    </view>
+    <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">简介</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">弹幕评论</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height: {{winHeight?winHeight+'px':'auto'}}" bindchange="bindChange">
+<swiper-item>
+    <scroll-view scroll-y="true" style="height: {{winHeight?winHeight+'px':'auto'}}">
   <view class="videoinfo">
 <view class="videoinfo-title">
 <image wx:if="{{result.playNum>=1000}}" class="icon1" src="../../imageIcon/hot.png"></image>
@@ -64,5 +72,23 @@
         <button plain style="display:block; color: #EA6CAF; border-color: #EA6CAF; margin-left:200rpx" class="marginview">关注</button>
       </view>
 </view>
-
-</view>
+</scroll-view>
+</swiper-item>
+<swiper-item>
+<scroll-view scroll-y="true" style="height: {{winHeight?winHeight+'px':'auto'}}">
+<view class='allMessage'>
+ <view class='comment-item' wx:for="{{danmuList}}" wx:key="{{item.id}}" wx:for-index="idx">
+            <view class='comment-person'>
+            <image class='comment-person-avatar' src='../../imageIcon/niming.png'></image>
+              <view class='comment-person-info ellipsis'>
+                <view class='comment-person-name ellipsis'>小帅哥</view>
+                <image class='comment-person-icon' src='../../imageIcon/dianzan-3.png' bindtap="goodDanmu" ></image>
+                <view class='comment-time ellipsis'>{{item.likes}}赞</view>
+              </view>
+            </view>
+            <view class='comment-text'>{{item.text}}</view>
+          </view>
+          </view>
+</scroll-view>
+</swiper-item>
+</swiper>

@@ -54,7 +54,8 @@ Page({
       url: 'http://localhost:8080/api/user/getUserInfo',
       method:'GET',
       data:{
-        id:1
+        id:1,
+        notSelected:1,
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -65,12 +66,26 @@ Page({
         });
         }
     })
+    wx.getSystemInfo( {
+ 
+      success: function( res ) {
+        that.setData( {
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+ 
+    });
   },
   data:{
     postId:0,
     isPlay:false,
     commentTime:0,
-    currentVideoTime:0
+    currentVideoTime:0,
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换
+    currentTab: 0,
   },
   inputValue: '',
   bindInputBlur: function(e) {
@@ -177,6 +192,24 @@ Page({
         }
       })
     }
+    },
+    bindChange: function( e ) {
+ 
+      var that = this;
+      that.setData( { currentTab: e.detail.current });
+   
+    },
+    swichNav: function( e ) {
+ 
+      var that = this;
+   
+      if( this.data.currentTab === e.target.dataset.current ) {
+        return false;
+      } else {
+        that.setData( {
+          currentTab: e.target.dataset.current
+        })
+      }
     },
   bindSendDanmu: function () {
     if(!app.globalData.isLogIn){

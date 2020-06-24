@@ -192,3 +192,73 @@
   height: 150rpx;
   border-radius: 50%;
 }
+.swiper-tab{
+	width: 100%;
+	border-bottom: 2rpx solid #777777;
+	text-align: center;
+	line-height: 80rpx;}
+.swiper-tab-list{  font-size: 30rpx;
+    display: inline-block;
+	width: 33.33%;
+	color: #777777;
+}
+.on{ color: #da7c0c;
+	border-bottom: 5rpx solid #da7c0c;}
+ 
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }
+.swiper-box view{
+	text-align: center;
+}
+.allMessage {
+  clear: both;
+  width: 92%;
+  margin: 0 auto;
+  padding: 4%;
+  background-color: #fff;
+  padding-bottom: 120rpx;
+}
+.comment-item {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 16px 0;
+  border-bottom: 1px solid #f3f3f5;
+}
+ 
+.comment-person {
+  display: flex;
+  align-items: center;
+}
+.comment-person-info {
+  flex: 1;
+}
+ 
+.comment-person-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #2c3036;
+}
+.comment-person-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+  margin: 0 10px 0 0;
+  flex: 0 0 42px;
+}
+.comment-person-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  flex: 0 0 42px;
+}
+.comment-time {
+  font-size: 13px;
+  color: #808286;
+}
+.comment-text {
+  font-size: 14px;
+  color: #2c3036;
+  line-height: 25px;
+  padding: 24rpx 0 0 20px;
+}
+
