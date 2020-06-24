@@ -23,7 +23,8 @@
     "pages/equipment_block/equipment_block",
     "pages/else_block/else",
     "pages/comment/comment",
-    "pages/search/search"
+    "pages/search/search",
+    "components/modal"
   ],
   "window": {
     "backgroundTextStyle": "light",

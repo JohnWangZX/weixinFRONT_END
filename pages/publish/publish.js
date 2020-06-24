@@ -23,6 +23,11 @@ Page({
     sourceType: ['拍照', '相册', '拍照或相册'],
     sizeTypeIndex: 0,
     sizeType: ['压缩', '原图', '压缩或原图'],
+    modal: "",
+  },
+  onReady: function () {
+    //获得popup组件
+    this.modal = this.selectComponent("#popup");
   },
  //选择视频
  chooseVideo: function() {
@@ -141,6 +146,25 @@ Page({
     wx.previewImage({
       current: current,
       urls: this.data.imageList
+    })
+  },
+  submit() {
+    //上传代码写在这
+    this.modal.showPopup();
+  },
+  _error() {
+    console.log('你点击了返回');
+    this.modal.hidePopup();
+    wx.navigateBack({
+      url: '../mine/mine',
+    })
+  },
+  //确认事件
+  _success() {
+    console.log('你点击了查看');
+    this.modal.hidePopup();
+    wx.navigateTo({
+      url: '../video/video',
     })
   }
 })

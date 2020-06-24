@@ -1,6 +1,7 @@
 <!--pages/publish.wxml-->
 <import src="../../common/footer.wxml" />
 <import src="../../common/header.wxml" />
+<import src="../../components/modal"/>
 <view class="container">
       <template is="header" data="{{title: '发布视频'}}"/>
       <image class='icon1' src="../../imageIcon/shipin.png"></image>
@@ -114,4 +115,12 @@
      <image class='btnImg' src='../../imageIcon/submit.png'></image>
      <view>确认发布</view>
       </button> 
+      <modal id='popup' 
+      title='发布成功' 
+      content='已同步到分区板块' 
+      btn_no='返回' 
+      btn_ok='查看'
+      bind:error="_error"  
+      bind:success="_success">
+  </modal>
     </view>
