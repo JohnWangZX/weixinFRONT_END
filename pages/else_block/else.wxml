@@ -14,7 +14,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{else_hotList}}" wx:key="avid">
+      <block wx:for="{{hotList}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -33,7 +33,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{else_newList}}" wx:key="avid">
+      <block wx:for="{{newList}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>

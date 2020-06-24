@@ -9,186 +9,6 @@ Page( {
     winHeight: 0,
     // tab切换
     currentTab: 0,
-    soc_shizhan_hotList: [
-      {
-        coverImg: '../../res/video_bc1.png',
-        title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av1'
-      },
-      {
-        coverImg: '../../res/video_bc2.png',
-        title: '【斗图歌】装逼不如斗图',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av2'
-      },
-      {
-        coverImg: '../../res/video_bc3.png',
-        title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av3'
-      },
-      {
-        coverImg: '../../res/video_bc4.jpg',
-        title: '撩人净土系列【红菱歌舞伎初音】极乐净土【大神犬PV付】MME配布',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av4'
-      }
-    ],
-    soc_shizhan_newList: [
-      {
-        coverImg: '../../res/video_bc5.jpg',
-        title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av1'
-      },
-      {
-        coverImg: '../../res/video_bc6.png',
-        title: '【斗图歌】装逼不如斗图',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av2'
-      },
-      {
-        coverImg: '../../res/video_bc7.png',
-        title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av3'
-      },
-      {
-        coverImg: '../../res/video_bc8.png',
-        title: '撩人净土系列【红菱歌舞伎初音】极乐净土【大神犬PV付】MME配布',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av4'
-      }
-    ],
-    soc_skill_hotList: [
-      {
-        coverImg: '../../res/video_bc5.jpg',
-        title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av1'
-      },
-      {
-        coverImg: '../../res/video_bc6.png',
-        title: '【斗图歌】装逼不如斗图',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av2'
-      },
-      {
-        coverImg: '../../res/video_bc7.png',
-        title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av3'
-      },
-      {
-        coverImg: '../../res/video_bc8.png',
-        title: '撩人净土系列【红菱歌舞伎初音】极乐净土【大神犬PV付】MME配布',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av4'
-      }
-    ],
-    soc_skill_newList: [
-      {
-        coverImg: '../../res/video_bc1.png',
-        title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av1'
-      },
-      {
-        coverImg: '../../res/video_bc2.png',
-        title: '【斗图歌】装逼不如斗图',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av2'
-      },
-      {
-        coverImg: '../../res/video_bc3.png',
-        title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av3'
-      },
-      {
-        coverImg: '../../res/video_bc4.jpg',
-        title: '撩人净土系列【红菱歌舞伎初音】极乐净土【大神犬PV付】MME配布',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av4'
-      }
-    ],
-    soc_strtgy_hotList: [
-      {
-        coverImg: '../../res/video_bc1.png',
-        title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av1'
-      },
-      {
-        coverImg: '../../res/video_bc2.png',
-        title: '【斗图歌】装逼不如斗图',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av2'
-      },
-      {
-        coverImg: '../../res/video_bc3.png',
-        title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av3'
-      },
-      {
-        coverImg: '../../res/video_bc4.jpg',
-        title: '撩人净土系列【红菱歌舞伎初音】极乐净土【大神犬PV付】MME配布',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av4'
-      }
-    ],
-    soc_strtgy_newList: [
-      {
-        coverImg: '../../res/video_bc1.png',
-        title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av1'
-      },
-      {
-        coverImg: '../../res/video_bc2.png',
-        title: '【斗图歌】装逼不如斗图',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av2'
-      },
-      {
-        coverImg: '../../res/video_bc3.png',
-        title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av3'
-      },
-      {
-        coverImg: '../../res/video_bc4.jpg',
-        title: '撩人净土系列【红菱歌舞伎初音】极乐净土【大神犬PV付】MME配布',
-        playNum: '4.7万',
-        commentNum: '977',
-        avid: 'av4'
-      }
-    ],
   },
   onLoad: function() {
     var that = this;
@@ -206,6 +26,102 @@ Page( {
       }
  
     });
+    wx.request({
+      url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
+      data:{
+        block:"soccer",
+        sub:"shizhan"
+      },
+      method:'GET',
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      success (res) {
+        that.setData({
+          hotList_shizhan:res.data
+       });
+        }
+    })
+    wx.request({
+      url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
+      data:{
+        block:"soccer",
+        sub:"shizhan"
+      },
+      method:'GET',
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      success (res) {
+        that.setData({
+          newList_shizhan:res.data
+       });
+        }
+    })
+    wx.request({
+      url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
+      data:{
+        block:"soccer",
+        sub:"jiqiao"
+      },
+      method:'GET',
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      success (res) {
+        that.setData({
+          hotList_jiqiao:res.data
+       });
+        }
+    })
+    wx.request({
+      url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
+      data:{
+        block:"soccer",
+        sub:"jiqiao"
+      },
+      method:'GET',
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      success (res) {
+        that.setData({
+          newList_jiqiao:res.data
+       });
+        }
+    })
+    wx.request({
+      url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
+      data:{
+        block:"soccer",
+        sub:"zhanshu"
+      },
+      method:'GET',
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      success (res) {
+        that.setData({
+          hotList_zhanshu:res.data
+       });
+        }
+    })
+    wx.request({
+      url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
+      data:{
+        block:"soccer",
+        sub:"zhanshu"
+      },
+      method:'GET',
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      success (res) {
+        that.setData({
+          newList_zhanshu:res.data
+       });
+        }
+    })
   },
   /**
      * 滑动切换tab
@@ -230,6 +146,12 @@ Page( {
         currentTab: e.target.dataset.current
       })
     }
+  },
+  toVideoPlay:function(e){
+    var id=e.currentTarget.dataset.yes
+    wx.navigateTo({
+      url: "../video/video?videoId="+id,
+    })
   },
   toHotList:function(){
     wx.navigateTo({

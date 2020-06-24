@@ -22,7 +22,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{swim_base_hotList}}" wx:key="avid">
+      <block wx:for="{{hotList_jichu}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -41,7 +41,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{swim_base_newList}}" wx:key="avid">
+      <block wx:for="{{newList_jichu}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -65,7 +65,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{swim_advance_hotList}}" wx:key="avid">
+      <block wx:for="{{hotList_jinjie}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -84,7 +84,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{swim_advance_newList}}" wx:key="avid">
+      <block wx:for="{{newList_jinjie}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>

@@ -102,11 +102,37 @@ Page({
         id:postId,
       },
       header: {
-        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' // 默认值
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
         },
         success (res) {
         }
     })
+    wx.request({
+      url: 'http://localhost:8080/api/user/addHistory',
+      method:'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      data:{
+        id:2,
+        postId:postId
+      }
+    })
+    },
+    addCollect:function(){
+      var that=this
+      var postId=that.data.postId
+      wx.request({
+        url: 'http://localhost:8080/api/user/addCollect',
+        method:'POST',
+        header:{
+          'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+        },
+        data:{
+          id:2,
+          postId:postId
+        }
+      })
     },
   bindSendDanmu: function () {
     this.videoContext.sendDanmu({
@@ -125,7 +151,7 @@ Page({
         id:postId
       },
       header: {
-        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' // 默认值
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' 
         },
     }),
     wx.request({

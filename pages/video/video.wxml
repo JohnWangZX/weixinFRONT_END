@@ -12,7 +12,7 @@
       <text>分享</text>
     </view> 
   </button>
-  <button class="videocollect">
+  <button class="videocollect" bindtap="addCollect">
   <view class="video-btn">
       <view class="video-pic">
        <image src="../../imageIcon/stars.png"></image>

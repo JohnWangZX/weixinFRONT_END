@@ -19,7 +19,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{hotList}}" wx:key="avid">
+      <block wx:for="{{history}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>

@@ -22,7 +22,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{equ_kaixiang_hotList}}" wx:key="avid">
+      <block wx:for="{{hotList_kaixiang}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -41,7 +41,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{equ_kaixiang_newList}}" wx:key="avid">
+      <block wx:for="{{newList_kaixiang}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -65,7 +65,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{equ_xingneng_hotList}}" wx:key="avid">
+      <block wx:for="{{hotList_ceping}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -84,7 +84,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{equ_xingneng_newList}}" wx:key="avid">
+      <block wx:for="{{newList_ceping}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>

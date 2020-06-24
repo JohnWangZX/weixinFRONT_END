@@ -23,7 +23,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{soc_shizhan_hotList}}" wx:key="avid">
+      <block wx:for="{{hotList_shizhan}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -42,7 +42,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{soc_shizhan_newList}}" wx:key="avid">
+      <block wx:for="{{newList_shizhan}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -67,7 +67,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{soc_skill_hotList}}" wx:key="avid">
+      <block wx:for="{{hotList_jiqiao}}" wx:key="avid">
       <template is="jiefItem1" data="{{...item}}"/>
       </block>
       </view>
@@ -86,7 +86,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{soc_skill_newList}}" wx:key="avid">
+      <block wx:for="{{newList_jiqiao}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -110,7 +110,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{soc_strtgy_hotList}}" wx:key="avid">
+      <block wx:for="{{hotList_zhanshu}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>
@@ -129,7 +129,7 @@
       </view>
     </view>
     <view class="content-wrapper">
-      <block wx:for="{{soc_strtgy_newList}}" wx:key="avid">
+      <block wx:for="{{newList_zhanshu}}" wx:key="avid">
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>

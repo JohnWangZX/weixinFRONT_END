@@ -3,6 +3,8 @@ Page({
   onReady: function (res){
   },
   data: {
+    isOnLine:false,
+    userId:2,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -67,6 +69,8 @@ console.log("inner")
     console.log(this.userInfo)
   },
   getUserInfo: function(e) {
+    var that=this
+    that.data.isOnLine=true
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -90,33 +94,78 @@ console.log("inner")
     })
   },
   upload_handler:function(){
+    var that=this
+    if(that.data.isOnLine){
     console.log("publish")
     wx.navigateTo({
      url: '../publish/publish'
    })
+  }else{
+    wx.showToast({
+      title: '请先登录',
+      icon: 'none',
+      duration: 1000
+    })
+  }
    },
   collect_handler:function(){
+    var that=this
+    if(that.data.isOnLine){
     console.log("collect")
     wx.navigateTo({
-     url: '../collect/collect'
+     url: "../collect/collect?id=2"
    })
+  }else{
+    wx.showToast({
+      title: '请先登录',
+      icon: 'none',
+      duration: 1000
+    })
+  }
    },
    release_handler:function(){
+    var that=this
+     if(that.data.isOnLine){
     console.log("release")
     wx.navigateTo({
-     url: '../release/release'
+     url: '../release/release?id=2'
    })
+  }else{
+    wx.showToast({
+      title: '请先登录',
+      icon: 'none',
+      duration: 1000
+    })
+  }
    },
    history_handler:function(){
+    var that=this
+     if(that.data.isOnLine){
     console.log("history")
     wx.navigateTo({
-     url: '../history/history'
+     url: '../history/history?id=2'
    })
+  }else{
+    wx.showToast({
+      title: '请先登录',
+      icon: 'none',
+      duration: 1000
+    })
+  }
    },
    comment_handler:function(){
+    var that=this
+     if(that.data.isOnLine){
     wx.navigateTo({
-      url: '../comment/comment'
+      url: '../comment/comment?id=2'
     })
+  }else{
+    wx.showToast({
+      title: '请先登录',
+      icon: 'none',
+      duration: 1000
+    })
+  }
    },
    containerTap: function (res) {
     var that = this

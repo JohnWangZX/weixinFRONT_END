@@ -115,7 +115,7 @@
      <image class='btnImg' src='../../imageIcon/submit.png'></image>
      <view>确认发布</view>
       </button> 
-      <modal id='popup' 
+ <modal id='popup' 
       title='发布成功' 
       content='已同步到分区板块' 
       btn_no='返回' 

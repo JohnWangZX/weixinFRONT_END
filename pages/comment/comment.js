@@ -1,44 +1,37 @@
 // pages/comment/comment.js
+var that
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    danmuList: [
-      {
-        coverImg: '../../res/video_bc5.jpg',
-        title: '【乐正绫】《华夏之章》【小旭PRO】【绛舞乱丸】',
-        text:'骚得一批屁屁屁屁屁呜呜呜呜',
-        avid: 'av1'
-      },
-      {
-        coverImg: '../../res/video_bc6.png',
-        title: '【斗图歌】装逼不如斗图',
-        text: '可以嗷',
-        avid: 'av2'
-      },
-      {
-        coverImg: '../../res/video_bc7.png',
-        title: '【胖胖球】【双子星】【獒龙】荒岛 - El transcurrir de las horas',
-        text: '你再骂',
-        avid: 'av3'
-      },
-      {
-        coverImg: '../../res/video_bc8.png',
-        title: '撩人净土系列【红菱歌舞伎初音】极乐净土【大神犬PV付】MME配布',
-        text: '给爷爬',
-        avid: 'av4'
-      }
-    ],
+    danmus:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    that=this
+    wx.request({
+      url: 'http://localhost:8080/api/user/getLiangPing',
+      method:'GET',
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      data:{
+        id:parseInt(options.id)
+      },
+      success:function (res) {
+        console.log(res.data)
+        that.setData({
+          danmus:res.data
+        })
+      },
+    })
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -81,10 +74,10 @@ Page({
   onReachBottom: function () {
 
   },
-  toVideoPlay:function(){
-    console.log("video")
+  toVideoPlay:function(e){
+    var id=e.currentTarget.dataset.yes
     wx.navigateTo({
-      url: '../video/video',
+      url: '../video/video?videoId='+id,
     })
   },
   /**
