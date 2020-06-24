@@ -9,6 +9,9 @@
         </view>
         <view class="info">
         <view class="title">{{text}}</view>
+        <view class="cell ">
+                <text>点赞数：30</text>
+            </view>
         <view class="meta clearfix">
             <view class="cell ">
                 <text>评论于：{{title}}</text>
