@@ -74,7 +74,7 @@ Page({
   },
   inputValue: '',
   bindInputBlur: function(e) {
-    if(!app.globalData.isLogIn) this.inputValue = e.detail.value
+    if(app.globalData.isLogIn) this.inputValue = e.detail.value
     else{
       wx.showToast({
         title: '登录后才能发送弹幕！',

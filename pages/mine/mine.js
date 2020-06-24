@@ -166,6 +166,20 @@ console.log("inner")
     })
   }
    },
+   others_handler:function(){
+    var that=this
+     if(app.globalData.isLogIn){
+    wx.navigateTo({
+      url: '../dianzan/dianzan?id=2'
+    })
+  }else{
+    wx.showToast({
+      title: '请先登录',
+      icon: 'none',
+      duration: 1000
+    })
+  }
+   },
    containerTap: function (res) {
     var that = this
     var x = res.touches[0].pageX;
