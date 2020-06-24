@@ -10,9 +10,15 @@ Page( {
     // tab切换
     currentTab: 0,
   },
-  onLoad: function() {
+  toVideoPlay:function(e){
+    var id=e.currentTarget.dataset.yes
+    wx.navigateTo({
+      url: "../video/video?videoId="+id,
+    })
+  },
+  onLoad: function(options) {
     var that = this;
-
+    var value=options.value
     /**
      * 获取系统信息
      */
@@ -24,7 +30,28 @@ Page( {
         });
       }
     });
-    
+    wx.request({
+      url: 'http://localhost:8080/api/video/searchVideo',
+      method:'GET',
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      data:{
+        str:value
+      },
+      success(res){
+        if(res.data==false){
+          wx.showToast({
+            title: '很抱歉，无相关视频！',
+            icon: 'none',
+            duration: 1000
+          })
+        }
+        that.setData({
+          searchList:res.data
+        })
+      }
+    })
   },
   /**
      * 滑动切换tab

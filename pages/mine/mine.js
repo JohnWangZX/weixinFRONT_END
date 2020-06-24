@@ -3,7 +3,6 @@ Page({
   onReady: function (res){
   },
   data: {
-    isOnLine:false,
     userId:2,
     motto: 'Hello World',
     userInfo: {},
@@ -70,9 +69,9 @@ console.log("inner")
   },
   getUserInfo: function(e) {
     var that=this
-    that.data.isOnLine=true
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
+    app.globalData.isLogIn=true
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
@@ -95,7 +94,7 @@ console.log("inner")
   },
   upload_handler:function(){
     var that=this
-    if(that.data.isOnLine){
+    if(app.globalData.isLogIn){
     console.log("publish")
     wx.navigateTo({
      url: '../publish/publish'
@@ -110,7 +109,7 @@ console.log("inner")
    },
   collect_handler:function(){
     var that=this
-    if(that.data.isOnLine){
+    if(app.globalData.isLogIn){
     console.log("collect")
     wx.navigateTo({
      url: "../collect/collect?id=2"
@@ -125,7 +124,7 @@ console.log("inner")
    },
    release_handler:function(){
     var that=this
-     if(that.data.isOnLine){
+     if(app.globalData.isLogIn){
     console.log("release")
     wx.navigateTo({
      url: '../release/release?id=2'
@@ -140,7 +139,7 @@ console.log("inner")
    },
    history_handler:function(){
     var that=this
-     if(that.data.isOnLine){
+     if(app.globalData.isLogIn){
     console.log("history")
     wx.navigateTo({
      url: '../history/history?id=2'
@@ -155,7 +154,7 @@ console.log("inner")
    },
    comment_handler:function(){
     var that=this
-     if(that.data.isOnLine){
+     if(app.globalData.isLogIn){
     wx.navigateTo({
       url: '../comment/comment?id=2'
     })

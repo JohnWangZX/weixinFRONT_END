@@ -1,4 +1,5 @@
 // pages/video/video.js
+var app=getApp()
 function getRandomColor () {
   let rgb = []
   for (let i = 0 ; i < 3; ++i){
@@ -68,13 +69,19 @@ Page({
   data:{
     postId:0,
     isPlay:false,
-    isLike:false,
     commentTime:0,
     currentVideoTime:0
   },
   inputValue: '',
   bindInputBlur: function(e) {
-    this.inputValue = e.detail.value
+    if(!app.globalData.isLogIn) this.inputValue = e.detail.value
+    else{
+      wx.showToast({
+        title: '登录后才能发送弹幕！',
+        icon: 'none',
+        duration: 1000
+      })
+    }
   },
     bindButtonTap: function() {  //视频下载
         var that = this
@@ -107,6 +114,7 @@ Page({
         success (res) {
         }
     })
+    if(!app.globalData.isLogIn){
     wx.request({
       url: 'http://localhost:8080/api/user/addHistory',
       method:'POST',
@@ -118,23 +126,66 @@ Page({
         postId:postId
       }
     })
+  }
     },
     addCollect:function(){
+      if(!app.globalData.isLogIn){
+        wx.showToast({
+          title: '登录后才能收藏！',
+          icon: 'none',
+          duration: 1000
+        })
+      }else{
       var that=this
       var postId=that.data.postId
       wx.request({
-        url: 'http://localhost:8080/api/user/addCollect',
-        method:'POST',
+        url: 'http://localhost:8080/api/user/isCollected',
+        method:"GET",
         header:{
-          'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+          'content-type': 'application/x-www-form-urlencoded;charset=utf-8' 
         },
         data:{
           id:2,
           postId:postId
+        },
+        success(res){
+          console.log("判断是否已经在收藏夹中，结果："+res.data)
+          if(res.data){
+            wx.showToast({
+              title: '已经收藏过了哦~',
+              icon: 'none',
+              duration: 1000
+            })
+          }else{
+          wx.showToast({
+            title: '收藏+1',
+            icon: 'none',
+            duration: 1000
+          })
+          wx.request({
+            url: 'http://localhost:8080/api/user/addCollect',
+            method:'POST',
+            header:{
+              'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+            },
+            data:{
+              id:2,
+              postId:postId
+            }
+          })
+        }
         }
       })
+    }
     },
   bindSendDanmu: function () {
+    if(!app.globalData.isLogIn){
+      wx.showToast({
+        title: '登录后才能发送弹幕！',
+        icon: 'none',
+        duration: 1000
+      })
+    }else{
     this.videoContext.sendDanmu({
       text: this.inputValue,
       color: getRandomColor()
@@ -170,6 +221,7 @@ Page({
         success (res) {
         }
     })
+  }
   },
   timeUpdate: function (e) {
     //实时播放进度 秒数
@@ -179,23 +231,54 @@ Page({
       })
   },
   addLikes:function(){
+    if(!app.globalData.isLogIn){
+      wx.showToast({
+        title: '登录后才能点赞！',
+        icon: 'none',
+        duration: 1000
+      })
+    }else{
     var that=this
     var postId=that.data.postId
-    that.setData({
-      isLike:true
-    })
     wx.request({
-      url: 'http://localhost:8080/api/video/addLikes',
-      method:'POST',
-      data:{
-        id:postId,
+      url: 'http://localhost:8080/api/user/isLiked',
+      method:"GET",
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' 
       },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' // 默认值
-        },
-        success (res) {
-        }
+      data:{
+        id:2,
+        postId:postId
+      },
+      success(res){
+        console.log("判断是否已经点过赞了，结果："+res.data)
+        if(res.data){
+          wx.showToast({
+            title: '已经点过赞了哦~',
+            icon: 'none',
+            duration: 1000
+          })
+        }else{
+        wx.showToast({
+          title: '点赞+1',
+          icon: 'none',
+          duration: 1000
+        })
+        wx.request({
+          url: 'http://localhost:8080/api/user/addLike',
+          method:'POST',
+          header:{
+            'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+          },
+          data:{
+            id:2,
+            postId:postId
+          }
+        })
+      }
+      }
     })
+  }
   },
     videoErrorCallback: function(e) {
       console.log('视频错误信息:');

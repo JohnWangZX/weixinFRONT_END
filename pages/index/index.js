@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+var searchValue=''
 var app = getApp()
 Page({
   onReady:function(res){
@@ -42,17 +43,6 @@ Page({
     interval: 3000,
     duration: 1000,
 },
-// btnToDo:function(){
-//   wx.showActionSheet({
-//     itemList: ['A', 'B', 'C'],
-//     success (res) {
-//       console.log(res.tapIndex)
-//     },
-//     fail (res) {
-//       console.log(res.errMsg)
-//     }
-//   })  
-// }
   toVideoPlay:function(e){
   var id=e.currentTarget.dataset.yes
   wx.navigateTo({
@@ -65,12 +55,21 @@ wx.navigateTo({
 })
 },
 getDataBindTap:function(e){
-  var searchValue = e.detail.value;
+  searchValue= e.detail.value;
 },
 handleinput: function(){
   //处理输入搜索
+  if(searchValue==''){
+    wx.showToast({
+      title: '请输入关键字',
+      icon: 'none',
+      duration: 1000
+    })
+  }else{
+  console.log(searchValue)
   wx.navigateTo({
-    url: "../search/search",
+    url: "../search/search?value="+searchValue,
   })
+}
 }
  })

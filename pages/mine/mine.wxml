@@ -35,15 +35,15 @@
 <view class="icon_collect" bindtap="collect_handler">
  <image class='image_collect' src="../../imageIcon/shoucang1.png" >
  </image>
- <text>收藏</text>
+ <text>我的收藏</text>
  </view>
  <view class="icon_release" bindtap="release_handler">
  <image class='image_release' src='../../imageIcon/fabu1.png' ></image>
- <text>发布</text>
+ <text>我发布的</text>
  </view>
  <view class="icon_history" bindtap="history_handler">
  <image class='image_history' src='../../imageIcon/guankan.png' ></image>
- <text>记录</text>
+ <text>观看记录</text>
  </view>
  </view>
  <view class="icon_split" >
@@ -54,15 +54,15 @@
 <view class="icon_comment" bindtap="comment_handler">
  <image class='image_comment' src="../../imageIcon/pinglun1.png" >
  </image>
- <text>评论</text>
+ <text>我的热评</text>
  </view>
  <view class="icon_upload" bindtap="upload_handler">
  <image class='image_upload' src='../../imageIcon/shangchuan.png' ></image>
- <text>上传</text>
+ <text>上传视频</text>
  </view>
  <view class="icon_others" bindtap="others_handler">
- <image class='image_others' src='../../imageIcon/qita.png'></image>
- <text>其他</text>
+ <image class='image_others' src='../../imageIcon/dianzan.png'></image>
+ <text>我赞过的</text>
  </view>
  </view>
 </view>
