@@ -8,12 +8,21 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    todos:[
-      {name:'JavaScript',completed:true},
-      {name:'Html',completed:true},
-      {name:'Css',completed:false}
+    massage:'initial',
+    orderItems: [
+      {
+        typeId: 0,
+        name: '粉丝',
+        url: 'bill',
+        imageurl: '../../imageIcon/fensi.png',
+      },
+      {
+        typeId: 1,
+        name: '关注',
+        url: 'bill',
+        imageurl: '../../imageIcon/guanzhu.png',
+      },
     ],
-    massage:'initial'
   },
   //事件处理函数
   bindViewTap: function() {

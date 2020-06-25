@@ -23,6 +23,16 @@
 .swiper-item{
   display: block;
   height: 150px;
+  width: 100%;
+}
+.photo1{
+  width: 100%;
+}
+.photo2{
+  width: 100%;
+}
+.photo3{
+  width: 100%;
 }
 .row-container {
   position: relative;

@@ -10,60 +10,48 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="icon_split">
- <image class='image_split' src="../../imageIcon/fengexian.png">
- </image>
- </view>
- <view class="flex-wrp1" style="flex-direction:row;">
-<view class="icon_fans" bindtap="fans_handler">
- <image class='image_fans' src="../../imageIcon/fensi.png" >
- </image>
- <text>粉丝</text>
- <text>{{user.fansNum}}</text>
- </view>
- <view class="icon_follow" bindtap="follow_handler">
- <image class='image_follow' src='../../imageIcon/guanzhu.png' ></image>
- <text>关注</text>
-  <text>{{user.concern}}</text>
- </view>
- </view>
- <view class="icon_split" >
- <image class='image_split' src="../../imageIcon/fengexian.png" >
- </image>
- </view>
- <view class="flex-wrp2" style="flex-direction:row;">
-<view class="icon_collect" bindtap="collect_handler">
- <image class='image_collect' src="../../imageIcon/shoucang1.png" >
- </image>
- <text>我的收藏</text>
- </view>
- <view class="icon_release" bindtap="release_handler">
- <image class='image_release' src='../../imageIcon/fabu1.png' ></image>
- <text>我发布的</text>
- </view>
- <view class="icon_history" bindtap="history_handler">
- <image class='image_history' src='../../imageIcon/guankan.png' ></image>
- <text>观看记录</text>
- </view>
- </view>
- <view class="icon_split" >
- <image class='image_split' src="../../imageIcon/fengexian.png" >
- </image>
- </view>
- <view class="flex-wrp3" style="flex-direction:row;">
-<view class="icon_comment" bindtap="comment_handler">
- <image class='image_comment' src="../../imageIcon/pinglun1.png" >
- </image>
- <text>我的热评</text>
- </view>
- <view class="icon_upload" bindtap="upload_handler">
- <image class='image_upload' src='../../imageIcon/shangchuan.png' ></image>
- <text>上传视频</text>
- </view>
- <view class="icon_others" bindtap="others_handler">
- <image class='image_others' src='../../imageIcon/dianzan.png'></image>
- <text>我赞过的</text>
- </view>
- </view>
+  <view class="order" >
+    <text class="myorder-text">我的信息</text>
+  </view>
+  <view class="line"></view>
+  <view class="navs">
+    <block wx:for-items="{{orderItems}}" wx:key="name" wx:for-index="idx">
+      <view class="nav-item"  data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text wx:if="{{idx==0}}">{{user.fansNum}}粉丝</text>
+        <text wx:else>{{user.concern}}关注</text>
+      </view>
+    </block>
+  </view>
+<view class="line"></view>
+<view class="line"></view>
+  <view class="person-list">
+    <view class="list-item" bindtap="collect_handler">
+      <image class="item-image" src="../../imageIcon/shoucang1.png"></image>
+      <text class="item-text">我的收藏</text>
+    </view>
+    <view class="list-item" bindtap="release_handler">
+      <image class="item-image" src="../../imageIcon/fabu1.png"></image>
+      <text class="item-text">我发布的</text>
+    </view>
+    <view class="list-item" bindtap="history_handler">
+      <image class="item-image" src="../../imageIcon/guankan.png"></image>
+      <text class="item-text">观看记录</text>
+    </view>
+    <view class="list-item" bindtap="comment_handler">
+      <image class="item-image" src="../../imageIcon/pinglun1.png"></image>
+      <text class="item-text">我的热评</text>
+    </view>
+    <view class="list-item" bindtap="upload_handler">
+      <image class="item-image" src="../../imageIcon/shangchuan.png"></image>
+      <text class="item-text">上传视频</text>
+    </view>
+    <view class="list-item" bindtap="others_handler">
+      <image class="item-image" src="../../imageIcon/dianzan.png"></image>
+      <text class="item-text">我赞过的</text>
+    </view>
+  </view>
+  <view class="line"></view>
+   <view class="line"></view>
 </view>
 

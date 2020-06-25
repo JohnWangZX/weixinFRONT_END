@@ -40,26 +40,6 @@
   align-items: center;
   justify-content: center;
 }
-.flex-wrp1{
-  display: flex;
-}
-.flex-wrp2{
-  display: flex;
-}
-.flex-wrp3{
-  display: flex;
-}
-.icon_split{
-  width: 568px;
-  height: 30px;
-}
-.image_split{
-  height: 20rpx;
-  width:1136rpx;
-  margin:5 rpx;
-  padding-top: 5 rpx;
-  margin-left: 0rpx;
-}
 .icon_fans{
   width: 100px;
   height:25px;
@@ -157,6 +137,73 @@
   position: absolute;
   
   overflow: hidden
+}
+.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 70rpx;
+}
+.myorder-text {
+  font-size: 25rpx;
+  color: gray;
+  margin: 20rpx;
+  width: 40%;
+}
+.navs {
+  display: flex;
+}
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30rpx;
+}
+.nav-item .nav-image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 10rpx;
+}
+.nav-item text {
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  color: gray;
+}
+/* 列表 */
+.person-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60rpx;
+}
+.item-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+.item-text {
+  color: gray;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+}
+.person-line {
+  width: 100%;
+  height: 2rpx;
+  background: lightgray;
+  margin-left: 90rpx;
+}
+.line{
+  width: 100%;
+  height: 2rpx;
+  background: lightgray;
+  margin-left: 0 rpx;
 }
 @-webkit-keyframes ripple {
   100% {
