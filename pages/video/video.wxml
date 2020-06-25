@@ -76,14 +76,23 @@
 <swiper-item>
 <scroll-view scroll-y="true" style="height: {{winHeight?winHeight+'px':'auto'}}">
 <view class='allMessage'>
+<<<<<<< HEAD
  <view class='comment-item' wx:for="{{danmuList}}" wx:key="id" wx:for-index="idx">
+=======
+ <view class='comment-item' wx:for="{{danmuList}}" wx:key="{{item.id}}" wx:for-index="idx">
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
             <view class='comment-person'>
             <image class='comment-person-avatar' src='../../imageIcon/niming.png'></image>
               <view class='comment-person-info ellipsis'>
                 <view class='comment-person-name ellipsis'>小帅哥</view>
+<<<<<<< HEAD
                 <image class='comment-person-icon' src='../../imageIcon/dianzan-3.png' bindtap="goodDanmu"
                 data-yes="{{item.id}}" ></image>
                 <view class='comment-time ellipsis'>{{item.likes+likeTime}}赞</view>
+=======
+                <image class='comment-person-icon' src='../../imageIcon/dianzan-3.png' bindtap="goodDanmu" ></image>
+                <view class='comment-time ellipsis'>{{item.likes}}赞</view>
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
               </view>
             </view>
             <view class='comment-text'>{{item.text}}</view>
@@ -91,4 +100,8 @@
           </view>
 </scroll-view>
 </swiper-item>
+<<<<<<< HEAD
 </swiper>
+=======
+</swiper>
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc

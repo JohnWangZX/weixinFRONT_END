@@ -13,7 +13,11 @@
       </view>
     </view>
     <view class="content-wrapper">
+<<<<<<< HEAD
       <block wx:for="{{dianzanList}}" wx:key="avid">
+=======
+      <block wx:for="{{searchList}}" wx:key="avid">
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
         <!-- 使用热门推荐模板，传入当前循环对象item -->
         <template is="jiefItem1" data="{{...item}}"/>
       </block>

@@ -136,4 +136,8 @@
 .icon_playnum{
   height: 50rpx;
   width: 50rpx;
+<<<<<<< HEAD
 }  
+=======
+} 
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc

@@ -197,7 +197,11 @@
 	width: 100%;
 	border-bottom: 2rpx solid #777777;
 	text-align: center;
+<<<<<<< HEAD
 	line-height: 20rpx;
+=======
+  line-height: 20rpx;
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
 margin-top: 0px;}
 .swiper-tab-list{  font-size: 30rpx;
     display: inline-block;
@@ -206,7 +210,11 @@ margin-top: 0px;}
 }
 .on{ color: #da7c0c;
 	border-bottom: 5rpx solid #da7c0c;}
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
 .swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }
 .swiper-box view{
 	text-align: center;
@@ -226,7 +234,11 @@ margin-top: 0px;}
   padding: 16px 0;
   border-bottom: 1px solid #f3f3f5;
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
 .comment-person {
   display: flex;
   align-items: center;
@@ -234,7 +246,11 @@ margin-top: 0px;}
 .comment-person-info {
   flex: 1;
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
 .comment-person-name {
   font-size: 16px;
   font-weight: 800;

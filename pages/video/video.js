@@ -65,15 +65,25 @@ Page({
             userInfo:res.data
         });
         }
+<<<<<<< HEAD
     }) 
     wx.getSystemInfo( {
+=======
+    })
+    wx.getSystemInfo( {
+ 
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
       success: function( res ) {
         that.setData( {
           winWidth: res.windowWidth,
           winHeight: res.windowHeight
         });
       }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
     });
   },
   data:{
@@ -81,12 +91,18 @@ Page({
     isPlay:false,
     commentTime:0,
     currentVideoTime:0,
+<<<<<<< HEAD
     playTime:0,
+=======
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
     winWidth: 0,
     winHeight: 0,
     // tab切换
     currentTab: 0,
+<<<<<<< HEAD
     likeTime:0
+=======
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
   },
   inputValue: '',
   bindInputBlur: function(e) {
@@ -195,6 +211,7 @@ Page({
     }
     },
     bindChange: function( e ) {
+<<<<<<< HEAD
 
       var that = this;
       that.setData( { currentTab: e.detail.current });
@@ -204,6 +221,17 @@ Page({
 
       var that = this;
 
+=======
+ 
+      var that = this;
+      that.setData( { currentTab: e.detail.current });
+   
+    },
+    swichNav: function( e ) {
+ 
+      var that = this;
+   
+>>>>>>> 8ee9d9d9815aab3d59f6a086d41a671d97f84bbc
       if( this.data.currentTab === e.target.dataset.current ) {
         return false;
       } else {

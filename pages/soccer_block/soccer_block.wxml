@@ -59,7 +59,7 @@
         <view class="bilibili-index-sprite bilibili-index-hot"></view>
         <image class="icon_command" src="../../imageIcon/soccer_skill.png"></image>
         <text>最热干货</text>
-      </view>
+        </view>
       <view class="right hot">
         <view class="bilibili-index-sprite bilibili-index-ranking"></view>
         <text bindtap="toHotList">更多</text>
