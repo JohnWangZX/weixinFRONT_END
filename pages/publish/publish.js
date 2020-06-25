@@ -1,6 +1,17 @@
 // pages/publish.js
+var uploadVid = require('../../js/upload_/uploadVideo.js');//地址换成你自己存放文件的位置
+var uploadImg = require('../../js/upload_/uploadImg.js');//地址换成你自己存放文件的位置
 var sourceType = [ ['camera'], ['album'], ['camera', 'album'] ]
 var sizeType = [ ['compressed'], ['original'], ['compressed', 'original'] ]
+var videoUrl=''
+var coverUrl=''
+var title=''
+var block=''
+var subClass=''
+var isTitle=false
+var isInfo=false
+var isVideo=false
+var isImage=false
 Page({
   data: {
     array_section:["篮球","足球","排球","乒乓球","电竞","健身","跑步","游泳","瑜伽","羽毛球","装备","其他"],
@@ -33,33 +44,30 @@ Page({
  chooseVideo: function() {
   var that = this
   wx.chooseVideo({
-    success: function(res) {
-      that.setData({
-        src: res.tempFilePath,
-      })
-      that.uploadvideo();
+    count: 1, // 默认最多一次选择1个视频
+    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+    success: function (res) {
+      // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+      var tempFilePaths = res.tempFilePath;
+        //上传图片
+        //你的域名下的/videos/当前年月日文件下的/视频.mp4
+        //uploadImage-调用的js/uploadImg.js
+        uploadVid(res.tempFilePath, 'videos/',
+          function (result) {
+            console.log("======上传成功视频地址为：", result);
+            videoUrl=result;
+            //这个result就是返给你上传到oss上的地址链接
+            wx.hideLoading();
+            isVideo=true
+          }, function (result) {
+            console.log("======上传失败======", result);
+            wx.hideLoading()
+          }
+        )
     }
   })
 },
-
-  //上传视频 目前后台限制最大100M，以后如果视频太大可以在选择视频的时候进行压缩
-  uploadvideo: function() {
-    var src = this.data.images[0];
-    wx.uploadFile({
-      url: '**************/Upload', //服务器接口
-      filePath: src,
-      header: {
-        'content-type': 'multipart/form-data'
-      },
-      name: 'files',
-      success: function(res) {
-        console.log(res.data)
-      },
-      fail: function() {
-        console.log('接口调用失败')
-      }
-    })
-  },
   removeImage(e) {
     const idx = e.target.dataset.idx
     this.data.images.splice(idx, 1)
@@ -73,43 +81,62 @@ Page({
       urls: images,  //所有要预览的图片
     })
   },
-  uploadpic: function() {
-    var src = this.data.imageList;
-    wx.uploadFile({
-      url: '**************/Upload', //服务器接口
-      filePath: src,
-      header: {
-        'content-type': 'multipart/form-data'
-      },
-      name: 'files',
-      success: function(res) {
-        console.log(res.data)
-      },
-      fail: function() {
-        console.log('接口调用失败')
-      }
-    })
-  },
   bindKeyInput:function(e){
     this.setData({
       inputValue:e.detail.value
     })
   },
-  getDataBindTap:function(e){
-    var result = e.detail.value;
-    console.log(result)
+  getInfo:function(e){
+    info=e.detail.value
+  },
+  getTitle:function(e){
+    isTitle=true
+    title=e.detail.value
+  },
+  getBlcok:function(e){
+    block=e.detail.value
   },
   bindPickerChange: function(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    var that=this
     this.setData({
       index: e.detail.value
     })
+    block=that.data.array_section[e.detail.value],
+    console.log(block)
   },
   bindPickerSubChange: function(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    var that=this
+    var index=that.data.index
     this.setData({
       sub_section_index: e.detail.value
     })
+    var sub_section_index=that.data.sub_section_index
+    if(index==0){
+      subClass=that.data.basket_section[sub_section_index]
+    }else if(index==1){
+      subClass=that.data.football_section[sub_section_index]
+    }else if (index==2) {
+      subClass=that.data.volley_section[sub_section_index]
+    }else if (index==3) {
+      subClass=that.data.ping_section[sub_section_index]
+    }else if (index==4) {
+      subClass=that.data.com_section[sub_section_index]
+    }else if (index==5) {
+      subClass=that.data.fit_section[sub_section_index]
+    }else if (index==6) {
+      subClass=that.data.run_section[sub_section_index]
+    }else if (index==7) {
+      subClass=that.data.swim_section[sub_section_index]
+    }else if (index==8) {
+      subClass=that.data.yoga_section[sub_section_index]
+    }else if (index==9) {
+      subClass=that.data.bad_section[sub_section_index]
+    }else if (index==10) {
+      subClass=that.data.equ_section[sub_section_index]
+    }else {
+      subClass=that.data.else_section[sub_section_index]
+    }
+    console.log(subClass)
   },
   sourceTypeChange: function (e) {
     this.setData({
@@ -129,31 +156,81 @@ Page({
   chooseImage: function () {
     var that = this
     wx.chooseImage({
-      sourceType: "album",
-      sizeType: "compressed",
+      count: 3, // 默认最多一次选择3张图
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
-        console.log(res)
-        that.setData({
-          imageList: res.tempFilePaths
-        })
-        that.uploadpic();
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        var tempFilePaths = res.tempFilePaths;
+        //支持多图上传
+        for (var i = 0; i < res.tempFilePaths.length; i++) {
+          //上传图片
+          //你的域名下的/images/当前年月日文件下的/图片.png
+          //图片路径可自行修改【(这二个参数就是你oss地址目录的下一个路径目录，比如:https://xxx.com/images/xxx.png)】
+          uploadImg(res.tempFilePaths[i], 'images/',
+            function (result) {
+              console.log("======上传成功图片地址为：", result);
+              //这个result就是返给你上传到oss上的地址链接
+              coverUrl=result
+              wx.hideLoading();
+              isImage=true
+            }, function (result) {
+              console.log("======上传失败======", result);
+              wx.hideLoading()
+            }
+          )
+        }
       }
     })
   },
   previewImage: function (e) {
     var current = e.target.dataset.src
-
     wx.previewImage({
       current: current,
       urls: this.data.imageList
     })
   },
   submit() {
-    //上传代码写在这
+    if(!isTitle){
+      wx.showToast({
+        title: '请填写标题！',
+        icon: 'none',
+        duration: 500
+      })
+    }else if(!isVideo){
+      wx.showToast({
+        title: '请选择视频！',
+        icon: 'none',
+        duration: 500
+      })
+    }else if(!isImage){
+      wx.showToast({
+        title: '请选择图片！',
+        icon: 'none',
+        duration: 500
+      })
+    }else{
+    wx.request({
+      url: 'http://localhost:8080/api/video/uploadVideo',
+      method:'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+        },
+        data:{
+          userid:2,
+          title:title,
+          info:info,
+          block:block,
+          subClass:subClass,
+          coverImg:coverUrl,
+          videoUrl:videoUrl
+        }
+    })
     this.modal.showPopup();
+  }
   },
   _error() {
-    console.log('你点击了返回');
+    console.log('返回');
     this.modal.hidePopup();
     wx.navigateBack({
       url: '../mine/mine',
@@ -161,10 +238,23 @@ Page({
   },
   //确认事件
   _success() {
-    console.log('你点击了查看');
+    console.log('查看');
     this.modal.hidePopup();
-    wx.navigateTo({
-      url: '../video/video',
+    wx.request({
+      url: 'http://localhost:8080/api/video/getVideoByVideoUrl',
+      method:'GET',
+      data:{
+        videoUrl:videoUrl
+      },
+      header:{
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+      },
+      success:function (res) {
+        console.log(res.data)
+        wx.navigateTo({
+          url: '../video/video?videoId='+res.data.id,
+        })
+      }
     })
   }
 })

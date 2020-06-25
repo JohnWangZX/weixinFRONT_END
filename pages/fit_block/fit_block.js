@@ -27,11 +27,12 @@ Page( {
       }
  
     });
+
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"fit",
-        sub:"dapei"
+        block:"健身",
+        sub:"膳食搭配"
       },
       method:'GET',
       header:{
@@ -46,8 +47,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"fit",
-        sub:"dapei"
+        block:"健身",
+        sub:"膳食搭配"
       },
       method:'GET',
       header:{
@@ -62,8 +63,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"fit",
-        sub:"jiqiao"
+        block:"健身",
+        sub:"健身技巧"
       },
       method:'GET',
       header:{
@@ -78,8 +79,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"fit",
-        sub:"jiqiao"
+        block:"健身",
+        sub:"健身技巧"
       },
       method:'GET',
       header:{

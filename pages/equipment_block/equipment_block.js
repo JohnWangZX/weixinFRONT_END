@@ -27,11 +27,12 @@ Page( {
       }
  
     });
+
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"equipment",
-        sub:"kaixiang"
+        block:"装备",
+        sub:"开箱测评"
       },
       method:'GET',
       header:{
@@ -46,8 +47,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"equipment",
-        sub:"kaixiang"
+        block:"装备",
+        sub:"开箱测评"
       },
       method:'GET',
       header:{
@@ -72,8 +73,8 @@ Page( {
    wx.request({
      url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
      data:{
-       block:"equipment",
-       sub:"ceping"
+       block:"装备",
+       sub:"性能测评"
      },
      method:'GET',
      header:{
@@ -88,8 +89,8 @@ Page( {
    wx.request({
      url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
      data:{
-       block:"equipment",
-       sub:"ceping"
+       block:"装备",
+       sub:"性能测评"
      },
      method:'GET',
      header:{

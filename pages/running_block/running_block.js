@@ -26,11 +26,12 @@ Page( {
       }
  
     });
+
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"running",
-        sub:"duanpao"
+        block:"跑步",
+        sub:"短跑"
       },
       method:'GET',
       header:{
@@ -45,8 +46,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"running",
-        sub:"duanpao"
+        block:"跑步",
+        sub:"短跑"
       },
       method:'GET',
       header:{
@@ -61,8 +62,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"running",
-        sub:"changpao"
+        block:"跑步",
+        sub:"长跑/马拉松"
       },
       method:'GET',
       header:{
@@ -77,8 +78,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"running",
-        sub:"changpao"
+        block:"跑步",
+        sub:"长跑/马拉松"
       },
       method:'GET',
       header:{

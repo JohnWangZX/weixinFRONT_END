@@ -12,10 +12,7 @@ Page( {
   },
   onLoad: function() {
     var that = this;
- 
-    /**
-     * 获取系统信息
-     */
+    
     wx.getSystemInfo( {
  
       success: function( res ) {
@@ -26,11 +23,12 @@ Page( {
       }
  
     });
+
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"soccer",
-        sub:"shizhan"
+        block:"足球",
+        sub:"实战教学"
       },
       method:'GET',
       header:{
@@ -45,8 +43,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"soccer",
-        sub:"shizhan"
+        block:"足球",
+        sub:"实战教学"
       },
       method:'GET',
       header:{
@@ -61,8 +59,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"soccer",
-        sub:"jiqiao"
+        block:"足球",
+        sub:"动作技巧"
       },
       method:'GET',
       header:{
@@ -77,8 +75,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"soccer",
-        sub:"jiqiao"
+        block:"足球",
+        sub:"动作技巧"
       },
       method:'GET',
       header:{
@@ -93,8 +91,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"soccer",
-        sub:"zhanshu"
+        block:"足球",
+        sub:"战术讲解"
       },
       method:'GET',
       header:{
@@ -109,8 +107,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"soccer",
-        sub:"zhanshu"
+        block:"足球",
+        sub:"战术讲解"
       },
       method:'GET',
       header:{
@@ -122,7 +120,9 @@ Page( {
        });
         }
     })
-  },
+  
+},
+
   /**
      * 滑动切换tab
      */

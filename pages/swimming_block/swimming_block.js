@@ -27,11 +27,12 @@ Page( {
       }
  
     });
+
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"swimming",
-        sub:"jichu"
+        block:"游泳",
+        sub:"基础泳姿"
       },
       method:'GET',
       header:{
@@ -46,8 +47,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"swimming",
-        sub:"jichu"
+        block:"游泳",
+        sub:"基础泳姿"
       },
       method:'GET',
       header:{
@@ -62,8 +63,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"swimming",
-        sub:"jinjie"
+        block:"游泳",
+        sub:"进阶技巧"
       },
       method:'GET',
       header:{
@@ -78,8 +79,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"swimming",
-        sub:"jinjie"
+        block:"游泳",
+        sub:"进阶技巧"
       },
       method:'GET',
       header:{

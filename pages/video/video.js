@@ -54,7 +54,8 @@ Page({
       url: 'http://localhost:8080/api/user/getUserInfo',
       method:'GET',
       data:{
-        id:1
+        id:1,
+        notSelected:1,
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -64,17 +65,32 @@ Page({
             userInfo:res.data
         });
         }
-    })
+    }) 
+    wx.getSystemInfo( {
+      success: function( res ) {
+        that.setData( {
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+
+    });
   },
   data:{
     postId:0,
     isPlay:false,
     commentTime:0,
-    currentVideoTime:0
+    currentVideoTime:0,
+    playTime:0,
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换
+    currentTab: 0,
+    likeTime:0
   },
   inputValue: '',
   bindInputBlur: function(e) {
-    if(!app.globalData.isLogIn) this.inputValue = e.detail.value
+    if(app.globalData.isLogIn) this.inputValue = e.detail.value
     else{
       wx.showToast({
         title: '登录后才能发送弹幕！',
@@ -100,7 +116,7 @@ Page({
       var that=this
       var postId=that.data.postId
       that.setData({
-        isPlay:true
+        playTime:that.data.playTime+1
       })
     wx.request({
       url: 'http://localhost:8080/api/video/addPlayNum',
@@ -177,6 +193,24 @@ Page({
         }
       })
     }
+    },
+    bindChange: function( e ) {
+
+      var that = this;
+      that.setData( { currentTab: e.detail.current });
+
+    },
+    swichNav: function( e ) {
+
+      var that = this;
+
+      if( this.data.currentTab === e.target.dataset.current ) {
+        return false;
+      } else {
+        that.setData( {
+          currentTab: e.target.dataset.current
+        })
+      }
     },
   bindSendDanmu: function () {
     if(!app.globalData.isLogIn){
@@ -279,6 +313,52 @@ Page({
       }
     })
   }
+  },
+  goodDanmu:function(e){
+    var that=this
+    var danmuId=e.currentTarget.dataset.yes
+    wx.request({
+      url: 'http://localhost:8080/api/user/isGoodDanmu',
+      method:'GET',
+      data:{
+        danmuId:danmuId,
+        id:2
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+        },
+        success (res) {
+          if(res.data){
+            wx.showToast({
+              title: '已经赞过这条弹幕了哦~',
+              icon: 'none',
+              duration: 500
+            })
+          }else{
+            that.setData({
+              likeTime:that.data.likeTime+1
+            })
+            wx.showToast({
+              title: '你赞了这条弹幕~',
+              icon: 'none',
+              duration: 500
+            })
+            wx.request({
+              url: 'http://localhost:8080/api/user/addDanmuLike',
+              method:'POST',
+              data:{
+                danmuId:danmuId,
+                id:2
+              },
+              header: {
+                'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+                },
+                success (res) {
+                }
+            })
+          }
+        }
+    })
   },
     videoErrorCallback: function(e) {
       console.log('视频错误信息:');

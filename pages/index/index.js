@@ -57,6 +57,21 @@ wx.navigateTo({
 getDataBindTap:function(e){
   searchValue= e.detail.value;
 },
+jump1:function(){
+  wx.navigateTo({
+    url: "../video/video?videoId=1",
+  })
+},
+jump2:function(){
+  wx.navigateTo({
+    url: "../video/video?videoId=2",
+  })
+},
+jump3:function(){
+  wx.navigateTo({
+    url: "../video/video?videoId=3",
+  })
+},
 handleinput: function(){
   //处理输入搜索
   if(searchValue==''){

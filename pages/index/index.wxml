@@ -12,9 +12,12 @@
                 <block wx:for="{{background}}" wx:for-index="idx"  wx:key="*this">
                     <swiper-item>
                         <view class="swiper-item {{item}}">
-                        <image wx:if="{{idx==0}}" class='photo1' bindtap="jump1" src='../../res/test1_kb.jpg'></image>
-                        <image wx:elif="{{idx==1}}" class='photo2' bindtap="jump2" src='../../res/test2_kb.jpg'></image>
-                        <image wx:else class='photo3' bindtap="jump3" src='../../res/test3_kb.jpg'></image>
+                        <image wx:if="{{idx==0}}" class='photo1' bindtap="jump1" 
+                        src='https://fengliu-123.oss-cn-shanghai.aliyuncs.com/test1_kb.jpg'></image>
+                        <image wx:elif="{{idx==1}}" class='photo2' bindtap="jump2" 
+                        src='https://fengliu-123.oss-cn-shanghai.aliyuncs.com/test2_kb.jpg'></image>
+                        <image wx:else class='photo3' bindtap="jump3" 
+                        src='https://fengliu-123.oss-cn-shanghai.aliyuncs.com/test3_kb.jpg'></image>
                         </view>
                     </swiper-item>
                 </block>

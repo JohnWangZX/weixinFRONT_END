@@ -27,11 +27,12 @@ Page( {
       }
  
     });
+
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"pingpong",
-        sub:"shizhan"
+        block:"乒乓球",
+        sub:"实战教学"
       },
       method:'GET',
       header:{
@@ -46,8 +47,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"pingpong",
-        sub:"shizhan"
+        block:"乒乓球",
+        sub:"实战教学"
       },
       method:'GET',
       header:{
@@ -62,8 +63,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"pingpong",
-        sub:"zhiban"
+        block:"乒乓球",
+        sub:"直板技巧"
       },
       method:'GET',
       header:{
@@ -78,8 +79,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"pingpong",
-        sub:"zhiban"
+        block:"乒乓球",
+        sub:"直板技巧"
       },
       method:'GET',
       header:{
@@ -94,8 +95,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"pingpong",
-        sub:"hengzhan"
+        block:"乒乓球",
+        sub:"横拍技巧"
       },
       method:'GET',
       header:{
@@ -110,8 +111,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"pingpong",
-        sub:"hengban"
+        block:"乒乓球",
+        sub:"横拍技巧"
       },
       method:'GET',
       header:{

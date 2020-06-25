@@ -1,39 +1,4 @@
-/**index.wxss**/
-@import "/app.wxss"; 
-.row{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1rpx solid #ccc;
-  margin: 20rpx;
-  border-radius: 20rpx;
-}
-.input {
-  padding-top: 10rpx;
-  padding-bottom: 10rpx;
-  flex: 1;
-}
-.input-placeholder{
-  color:grey;
-}
-.image-search{
-  height: 50rpx;
-  width: 50rpx;
-}
-.swiper-item{
-  display: block;
-  height: 150px;
-  width: 100%;
-}
-.photo1{
-  width: 100%;
-}
-.photo2{
-  width: 100%;
-}
-.photo3{
-  width: 100%;
-}
+/* pages/dianzan/dianzan.wxss */
 .row-container {
   position: relative;
   width: 100%;
@@ -161,8 +126,8 @@
   margin-top: -6px;
 }
 .icon_command{
-  height: 50rpx;
-  width: 50rpx;
+  height: 80rpx;
+  width: 80rpx;
 }
 .icon_comment{
   height: 40rpx;
@@ -171,4 +136,4 @@
 .icon_playnum{
   height: 50rpx;
   width: 50rpx;
-}
+}  

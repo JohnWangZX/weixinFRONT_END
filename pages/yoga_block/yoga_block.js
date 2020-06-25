@@ -30,8 +30,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"yoga",
-        sub:"jichu"
+        block:"瑜伽",
+        sub:"基础动作"
       },
       method:'GET',
       header:{
@@ -46,8 +46,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"yoga",
-        sub:"jichu"
+        block:"瑜伽",
+        sub:"基础动作"
       },
       method:'GET',
       header:{
@@ -62,8 +62,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"yoga",
-        sub:"jinjie"
+        block:"瑜伽",
+        sub:"进阶提高"
       },
       method:'GET',
       header:{
@@ -78,8 +78,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"yoga",
-        sub:"jinjie"
+        block:"瑜伽",
+        sub:"进阶提高"
       },
       method:'GET',
       header:{

@@ -23,11 +23,12 @@ Page( {
         });
       }
     });
+
     wx.request({
       url: 'http://localhost:8080/api/video/getHotVideoByBlcok',
       data:{
-        block:"badminton",
-        sub:"shizhan"
+        block:"羽毛球",
+        sub:"实战教学"
       },
       method:'GET',
       header:{
@@ -42,8 +43,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"badminton",
-        sub:"shizhan"
+        block:"羽毛球",
+        sub:"实战教学"
       },
       method:'GET',
       header:{
@@ -58,8 +59,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"badminton",
-        sub:"jiqiao"
+        block:"羽毛球",
+        sub:"羽毛球技巧"
       },
       method:'GET',
       header:{
@@ -74,8 +75,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"badminton",
-        sub:"jiqiao"
+        block:"羽毛球",
+        sub:"羽毛球技巧"
       },
       method:'GET',
       header:{
@@ -90,8 +91,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"badminton",
-        sub:"zhanshu"
+        block:"羽毛球",
+        sub:"战术讲解"
       },
       method:'GET',
       header:{
@@ -106,8 +107,8 @@ Page( {
     wx.request({
       url: 'http://localhost:8080/api/video/getNewVideoByBlcok',
       data:{
-        block:"badminton",
-        sub:"zhanshu"
+        block:"羽毛球",
+        sub:"战术讲解"
       },
       method:'GET',
       header:{

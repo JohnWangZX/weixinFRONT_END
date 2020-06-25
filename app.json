@@ -24,7 +24,8 @@
     "pages/else_block/else",
     "pages/comment/comment",
     "pages/search/search",
-    "components/modal"
+    "components/modal",
+    "pages/dianzan/dianzan"
   ],
   "window": {
     "backgroundTextStyle": "light",

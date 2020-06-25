@@ -8,11 +8,11 @@
       <view class="section ">
                 <view class="section__title">视频标题：{{inputValue}}</view>
                 <view class='input_border1'>
-                <input  bindinput="bindKeyInput" placeholder="请输入视频标题"/>
+                <input  bindinput="bindKeyInput" placeholder="请输入视频标题" bindblur="getTitle"/>
                 </view>
              <view class="title-bg">视频描述:</view>
              <view class='input_border2'>
-    <textarea  placeholder="请输入相关描述" bindblur="getDataBindTap" auto-height />
+    <textarea  placeholder="请输入相关描述" bindblur="getInfo" auto-height />
     </view>
     <view class="section__title">发布到：</view>
           <view class='picker_border'>

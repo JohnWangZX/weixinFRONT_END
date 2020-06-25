@@ -8,12 +8,21 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    todos:[
-      {name:'JavaScript',completed:true},
-      {name:'Html',completed:true},
-      {name:'Css',completed:false}
+    massage:'initial',
+    orderItems: [
+      {
+        typeId: 0,
+        name: '粉丝',
+        url: 'bill',
+        imageurl: '../../imageIcon/fensi.png',
+      },
+      {
+        typeId: 1,
+        name: '关注',
+        url: 'bill',
+        imageurl: '../../imageIcon/guanzhu.png',
+      },
     ],
-    massage:'initial'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -69,8 +78,6 @@ console.log("inner")
   },
   getUserInfo: function(e) {
     var that=this
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
     app.globalData.isLogIn=true
     this.setData({
       userInfo: e.detail.userInfo,
@@ -85,7 +92,6 @@ console.log("inner")
         id:2
       },
       success (res) {
-        console.log(res.data)
         that.setData({
           user:res.data
       });
@@ -157,6 +163,20 @@ console.log("inner")
      if(app.globalData.isLogIn){
     wx.navigateTo({
       url: '../comment/comment?id=2'
+    })
+  }else{
+    wx.showToast({
+      title: '请先登录',
+      icon: 'none',
+      duration: 1000
+    })
+  }
+   },
+   others_handler:function(){
+    var that=this
+     if(app.globalData.isLogIn){
+    wx.navigateTo({
+      url: '../dianzan/dianzan?id=2'
     })
   }else{
     wx.showToast({
